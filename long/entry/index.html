@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <img class="fan_hui" src="img/fan.png">
+            <img class="wen_ti" src="img/wen.png">
+        </div>
+        <div class="nei_bian">
+            <h1 class="biao_ti">账号登录</h1>
+        </div>
+        <div class="liang_kuang">
+            <div class="zhang_hao">
+                <input class="account_number" type="text" placeholder="请输入手机号码">
+            </div>
+            <div class="mi_ma">
+                <input class="passwor" type="password" placeholder="请输入密码 ">
+            </div>
+        </div>
+        <div class="entry">
+            <button class="btu">登录</button>
+        </div>
+        <div class="zhu_ce">
+            <a class="zhu_zhang" href="#">注册账号</a>
+            <a class="wang_ji" href="#">忘记密码</a>
+        </div>
+        <div class="footer">
+            <div class="qi_ta">
+                <span>其他登录方式</span>
+            </div>
+            <div class="fang_shi">
+                <div class="san_fen">
+                    <img class="wei_xin" src="img/wx.png">
+                    <br />
+                    <span>微信</span>
+                </div>
+                <div class="san_fen">
+                    <img class="wei_bo" src="img/wb.png">
+                    <br />
+                    <span>微博</span>
+                </div>
+                <div class="san_fen">
+                    <img class="qq" src="img/qq.png">
+                    <br />
+                    <span>QQ</span>
+                </div>
+            </div>
+        </div>
+        <div class="tan_chu">
+            <span>问题帮助</span>
+
+            <span class="guan_bi">×</span>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".guan_bi").click(function () {
+                $(".tan_chu").hide();
+            });
+            $(".wen_ti").click(function () {
+                $(".tan_chu").show();
+            });
+        });
+    </script>
+</body>
+
+</html>

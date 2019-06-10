@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="swiper-4.5.0/dist/css/swiper.min.css">
+    <title>Document</title>
+    <script>
+        
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+
+    
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="header">
+            <img class="fan_hui" src="img/back_jt.png">
+            <a href="#">商品</a>
+            <a href="#">详情</a>
+            <a href="#">评价</a>
+        </div>
+        <!-- 轮播 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-hash="slide1"><img src="img/big_5.jpg" alt="focus1"></div>
+                <div class="swiper-slide" data-hash="slide2"><img src="img/pic08.jpg" alt="focus1"></div>
+                <div class="swiper-slide" data-hash="slide3"><img src="img/big_5.jpg" alt="focus1"></div>
+                <div class="swiper-slide" data-hash="slide4"><img src="img/pic08.jpg" alt="focus1"></div>
+    
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+        </div>
+    </div>
+    <script src="swiper-4.5.0/dist/js/swiper.min.js"></script>
+    <script>
+       
+            var mySwiper = new Swiper ('.swiper-container', {
+    loop: true, // 循环模式选项
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
+        
+        </script>
+   
+</body>
+</html>

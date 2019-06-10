@@ -1,0 +1,399 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Swiper-3.4.2/dist/css/swiper.min.css">
+    <style>
+        .swiper-container,
+        .swiper-slide,
+        .swiper-slide img {
+            width: 100%;
+        }
+
+        .swiper-container {
+            height: 4rem !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: orange !important;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--头部-->
+    <div class="header">
+        <ul class="header_list">
+            <li class="left"><img src="img/logo01.png" alt="logo"></li>
+            <li class="center">
+                <img src="img/icon_search.png" alt="search">
+                <input type="text" name="search" id="search" placeholder="新品上市"></li>
+            <li class="right"><a href="#">
+                    <span>登录</span>
+                    <img src="img/menu_icon04.png" alt="login">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--轮播图-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1"><img src="img/banner.jpg" alt="focus1"></div>
+            <div class="swiper-slide" data-hash="slide2"><img src="img/banner01.jpg" alt="focus1"></div>
+            <div class="swiper-slide" data-hash="slide3"><img src="img/banner.jpg" alt="focus1"></div>
+            <div class="swiper-slide" data-hash="slide4"><img src="img/banner01.jpg" alt="focus1"></div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+    </div>
+    <!--商品导航轮播-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1">
+                <div class="goods_nav">
+                    <ul class=" goods_list">
+                        <li class="list1">
+                            <ul>
+                                <li>
+                                    <img src="img/nav_icon01.jpg" alt="nav">
+                                    <p>经典男鞋</p>
+                                </li>
+                                <li>
+                                    <img src="img/nav_icon02.jpg" alt="nav">
+                                    <p>女鞋</p>
+                                </li>
+                                <li>
+                                    <img src="img/nav_icon03.jpg" alt="nav">
+                                    <p>T恤</p>
+                                </li>
+                                <li>
+                                    <img src="img/nav_icon04.jpg" alt="nav">
+                                    <p>外套/卫衣</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list2">
+                            <ul>
+                                <li>
+                                    <img src="img/nav_icon05.jpg" alt="nav">
+                                    <p>夏季新款</p>
+                                </li>
+                                <li>
+                                    <img src="img/nav_icon06.jpg" alt="nav">
+                                    <p>户外箱包</p>
+                                </li>
+                                <li>
+                                    <img src="img/nav_icon07.jpg" alt="nav">
+                                    <p>体育器材</p>
+                                </li>
+                                <li>
+                                    <img src="img/nav_icon08.jpg" alt="nav">
+                                    <p>积分专区</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-slide" data-hash="slide2">
+                <ul class="list3">
+                    <li>
+                        <img src="img/nav_icon04.jpg" alt="nav">
+                        <p>其他栏目</p>
+                    </li>
+                    <li>
+                        <img src="img/nav_icon07.jpg" alt="nav">
+                        <p>健身器材</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    </div>
+    <div class="line">
+    </div>
+    <!--商城公告-->
+    <div class="notice">
+        <div class="ntc_txt">
+            <img src="img/news_tit.png" alt="news">
+            <span>热烈祝贺颜文明体育贵阳市枣山路店盛大开业</span>
+        </div>
+        <div class="banner">
+            <img src="img/bg_sj.jpg" alt="bg">
+        </div>
+    </div>
+    <!--热销品-->
+    <div class="hot">
+        <div class="hot_txt">
+            <span></span>
+            <div class="hot_center">
+                <p>热销品类</p>
+                <img src="img/line_botm.jpg" alt="line">
+            </div>
+            <span></span>
+        </div>
+        <div class="hot_detail">
+            <!--左侧轮播-->
+            <div class="dtal_left">
+                <div class="swiper-container" style="height: 5.5rem !important;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-hash="slide1">
+                            <div class="left_swiper">
+                                <img src="img/pic01.jpg" alt="pic1">
+                                <p>
+                                    颜文明旗舰店Classic al运动鞋<br />男/女 男鞋头
+                                </p>
+                                <span>
+                                    <em>￥699.00</em>
+                                    <i>￥599.00</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="slide2">
+                            <div class="left_swiper">
+                                <img src="img/pic03.jpg" alt="pic1">
+                                <p>
+                                    颜文明旗舰店Classic al运动鞋<br />男/女 男鞋头
+                                </p>
+                                <span>
+                                    <em>￥699.00</em>
+                                    <i>￥599.00</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="slide3">
+                            <div class="left_swiper">
+                                <img src="img/pic08.jpg" alt="pic1">
+                                <p>
+                                    颜文明旗舰店Classic al运动鞋<br />男/女 男鞋头
+                                </p>
+                                <span>
+                                    <em>￥699.00</em>
+                                    <i>￥599.00</i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="dtal_right">
+                <div class="dtal_rightTop">
+                    <img src="img/index_ad_pic (2).jpg" alt="index">
+                </div>
+                <div class="dtal_rightBottom">
+                    <div class="rightBottom_left">
+                        <img src="img/index_ad_pic (3).jpg" alt="index">
+                    </div>
+                    <div class="rightBottom_right">
+                        <img src="img/index_ad_pic (6).jpg" alt="index">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner轮播-->
+    <div class="banner_swiper">
+        <div class="swiper-container" style="height: 1.5rem !important">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-hash="slide1">
+                    <img src="img/ad_pic01.jpg" alt="pic">
+                </div>
+                <div class="swiper-slide" data-hash="slide2">
+                    <img src="img/ad_pic02.jpg" alt="pic">
+                </div>
+                <div class="swiper-slide" data-hash="slide3">
+                    <img src="img/ad_pic03.jpg" alt="pic">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!--新品推荐-->
+    <div class="newGoods">
+        <div class="hot_txt">
+            <span></span>
+            <div class="hot_center">
+                <p>新品推荐</p>
+                <img src="img/line_botm.jpg" alt="line">
+            </div>
+            <span></span>
+        </div>
+        <ul class="newGoods_list">
+            <li class="newGoods_list1">
+                <ul>
+                    <li>
+                        <img src="img/pic01.jpg" alt="pic">
+                        <p>颜文明专业网鞋复古休闲运动鞋</p>
+                        <span>￥699.00</span>
+                    </li>
+                    <li>
+                        <img src="img/pic02.jpg" alt="pic">
+                        <p>颜文明专业网鞋复古休闲运动鞋</p>
+                        <span>￥699.00</span>
+                    </li>
+                    <li>
+                        <img src="img/pic03.jpg" alt="pic">
+                        <p>颜文明专业网鞋复古休闲运动鞋</p>
+                        <span>￥699.00</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="newGoods_list2">
+                <ul>
+                    <li>
+                        <img src="img/pic04.jpg" alt="pic">
+                        <p>颜文明专业网鞋复古休闲运动鞋</p>
+                        <span>￥699.00</span>
+                    </li>
+                    <li>
+                        <img src="img/pic05.jpg" alt="pic">
+                        <p>颜文明专业网鞋复古休闲运动鞋</p>
+                        <span>￥699.00</span>
+                    </li>
+                    <li>
+                        <img src="img/pic06.jpg" alt="pic">
+                        <p>颜文明专业网鞋复古休闲运动鞋</p>
+                        <span>￥699.00</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="more">
+            <a href="#">更多新品></a>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+            <ul class="footer_list">
+                <li>
+                    <img src="img/menu_icon01_r.png" alt="menu">
+                    <p> <a href="home.html">首页</a></p>
+                </li>
+                <li>
+                    <img src="img/menu_icon02.png" alt="menu">
+                    <p>分类</p>
+                </li>
+                <li>
+                    <img src="img/menu_icon03.png" alt="menu">
+                    <p><a href="cart.html">购物车</a></p>
+                </li>
+                <li>
+                    <img src="img/menu_icon04.png" alt="menu">
+                    <p>我的</p>
+                </li>
+            </ul>
+        </div>
+    <!--回到顶部-->
+    <div class="back_top">
+        <a href="#"><img src="img/back_top.png" alt="back_top"></a>
+    </div>
+    <!--跳转-->
+    <!-- <div class="skip">
+        <div class="search_top">
+            <a href="#">
+                <img src="img/back_jt.png" alt="back">
+            </a>
+            <div class="search_form">
+                <form action="#">
+                    <select>
+                        <option>商品</option>
+                        <option>店铺</option>
+                    </select>
+                    <input type="text" placeholder="新品上市">
+                    <button>
+                        <img src="img/icon_search.png">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="search_txt">
+            <h2>热门搜索</h2>
+            <ul>
+                <li> <a href="#">经典跑步鞋</a></li>
+                <li> <a href="#">经典男鞋</a></li>
+                <li> <a href="#">夏季新款</a></li>
+                <li> <a href="#">篮球鞋</a></li>
+                <li> <a href="#">网球鞋</a></li>
+                <li> <a href="#">体育用品</a></li>
+                <li> <a href="#">新款T恤男</a></li>
+                <li> <a href="#">运动器材</a></li>
+                <li> <a href="#">女装</a></li>
+                <li> <a href="#">男装</a></li>
+                <li> <a href="#">颜文明跑鞋</a></li>
+                <li> <a href="#">卫衣男</a></li>
+            </ul>
+        </div>
+
+    </div> -->
+    <!--轮播-->
+    <script src="swiper-3.4.2/dist/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            // nextButton: '.swiper-button-next',
+            // prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            hashnav: true,
+            speed: 3000,
+            hashnavWatchState: true,
+            loop: true,
+            autoplay: true
+        });
+
+    </script>
+    <!--判断内核-->
+    <script>
+        $(".back_top").click(function(){
+            isTerminal();
+        });
+        function isTerminal() {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+            var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            if (isAndroid) {
+                //这个是安卓操作系统
+                alert("android");
+                return "android"
+            }
+            if (isIOS) {
+                //这个是ios操作系统
+                alert("iOS");
+                return "iOS"
+            }
+            return "PC"
+
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 2rem !important;
+}
+.header{
+    width: 100%;
+    height: 1rem;
+    background-color: white;
+}
+.header_list{
+    width: 90%;
+    height: 1rem;
+    margin: 0 5%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    display: inline-flex;
+}
+.header_list li{
+    width: 33.33%;
+    height: 1rem;
+    line-height: 0.5rem;
+}
+.left{
+    float: left;
+}
+.left img{
+    width: 0.307rem;
+    height: 0.4992rem;
+}
+.right img{
+    width: 0.6rem;
+    height: 0.5rem;
+}
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+    font-size: 0.35rem;
+    font-weight: 400;
+    padding-top: 0.1rem;
+}
+.main{
+    width: 100%;
+    height: 12.5rem;
+    background-color: #f3f3f3;
+}
+.main_title{
+    width: 90%;
+    margin: 0 5%;
+    height: 1rem;
+}
+.main_title h2{
+    font-size: 0.35rem;
+    color: black;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    line-height: 0.8rem;
+}
+.main_data{
+    width: 100%;
+    background-color: white;
+    /* height: 2.5rem; */
+    margin-bottom: 0.3rem;
+}
+.product{
+    width: 90%;
+    height: 2.5rem;
+    margin: 0 5%;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.product li{
+    float: left;
+    height: 2.1rem;
+    width: 30%;
+    padding-left: 0.2rem;
+}
+.product li img{
+    width: 100%;
+}
+.product li h2{
+    color: black;
+    font-size: 0.4rem;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
+    overflow: hidden;
+}
+.product li h6{
+    color: darkgray;
+    font-size: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+.product li p span{
+    font-size: 0.25rem;
+}
+.product li p{
+    color: red;
+    font-size: 0.4rem;
+}
+.add{
+    display: inline-flex;
+}
+.first,.change,.last{
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-top: 1rem;
+    line-height: 0.5rem;
+    border: 1px solid #dadada;
+    color: #b2b2b2;
+    font-size: 0.4rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.change{
+    width: 0.65rem;
+    height: 0.65rem;
+    color: red;
+}
+.count{
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    bottom: 1rem;
+    background-color: darksalmon;
+}
+.conut_data{
+    width: 100%;
+    height: 1rem;
+    display: inline-flex;
+}
+.count_left{
+    padding-left: 5%;
+    width: 70%;
+}
+.count_left h3{
+    color: black;
+    font-size: 0.35rem;
+    line-height: 1rem;
+}
+.count_right{
+    float: right;
+    width: 30%;
+    background-color: #ea2979;
+    text-align: center;
+}
+.count_right a{
+    line-height: 1rem;
+    color: white;
+    font-size: 0.35rem;
+    font-weight: 400; 
+}
+.footer{
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #f6f8f7;
+}
+.footer_list{
+    width: 100%;
+    height: 1rem;
+}
+.footer_list li{
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    height: 1rem;
+}
+.footer_list li img{
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.footer_list li p{
+    color: black;
+    padding-top: 0.2rem;
+    font-size: 0.25rem;
+    text-align: center;
+}
+.selected{
+    color: red !important;
+}

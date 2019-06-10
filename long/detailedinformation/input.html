@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="mui.picker.css" />
+    <link rel="stylesheet" type="text/css" href="mui.css" />
+    <title>Document</title>
+    <style>
+        p {
+            padding: 10px 0;
+            padding-left: 13px;
+            color: #666;
+            font-size: 17px;
+            width: 100%;
+            height: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 0.1rem;
+            display: block;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .header {
+            background-color: #f5f5f5;
+            width: 100%;
+            height: 1rem;
+            font-size: 20px;
+            line-height: 1rem;
+
+        }
+
+        .fan_hui {
+            display: inline-block;
+            margin-left: 0.2rem;
+        }
+
+        .biao_ti {
+            margin-left: 1.7rem;
+        }
+
+        .shang_ban {
+            width: 100%;
+            height: 6.3rem;
+            background: url(img/line_botm.jpg) no-repeat center bottom #fff;
+            background-size: 100% 3px;
+        }
+
+        .xia_ban {
+            width: 100%;
+            height: 7.8rem;
+            background: url(img/line_botm.jpg) no-repeat center bottom #fff;
+            background-size: 100% 3px;
+        }
+
+        .xian_zhi {
+            margin: 0.2rem;
+        }
+
+        input {
+            margin: 0;
+        }
+
+        .wen_ben {
+            width: 100%;
+            color: #666;
+            border: 1px solid #ddd;
+            -web-kit-appearance: none;
+            -moz-appearance: none;
+            height: 0.7rem;
+            margin-top: 1px;
+            display: block;
+            margin-top: 0.3rem;
+            border-radius: 0.1rem;
+        }
+
+        .wen_ben1 {
+            width: 100%;
+            color: #666;
+            border: 1px solid #ddd;
+            -web-kit-appearance: none;
+            -moz-appearance: none;
+            height: 0.7rem;
+            margin-top: 1px;
+            display: block;
+            margin-top: 0.13rem;
+            border-radius: 0.1rem;
+        }
+
+        .pei_song {
+            width: 45%;
+            height: 0.7rem;
+            background-color: yellow;
+            border: none;
+            border-radius: 0.1rem;
+        }
+
+        .shan_chu {
+            width: 45%;
+            height: 0.7rem;
+            border: none;
+            border-radius: 0.1rem;
+        }
+
+        .xin_zeng {
+            width: 100%;
+            height: 0.7rem;
+            background-color: yellow;
+            border: none;
+            border-radius: 0.1rem;
+            margin-top: 0.2rem;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <div>
+        <div class="header">
+            <div class="fan_hui">
+                <img src="img//back_jt (1).png" width="10px" height="auto">
+            </div>
+            <span class="biao_ti">请填写收货地址</span>
+        </div>
+        <!-- 内容 -->
+        <div class="shang_ban">
+            <div class="xian_zhi">
+                <input class="wen_ben" type="text" value="买了个东西">
+                <input class="wen_ben1" type="text" value="电子邮件地址">
+                <p id="city_text">请选择省/请选择市/请选择县</p>
+                <input class="wen_ben1" type="text" value="花果园国际金融街5号27全层写字楼">
+                <input class="wen_ben1" type="text" value="15008508888">
+                <button class="pei_song">配送至这个地址</button>
+                <button class="shan_chu">删除这个地址</button>
+            </div>
+        </div>
+        <div class="xia_ban">
+            <div class="xian_zhi">
+                <input class="wen_ben" type="text" value="收货人姓名">
+                <input class="wen_ben1" type="text" value="电子邮件地址">
+                <p id="city_text">请选择省/请选择市/请选择县</p>
+                <input class="wen_ben1" type="text" value="详细地址">
+                <input class="wen_ben1" type="text" value="手机号（必填）">
+                <input type="text" id="code" class="txt">
+                <button class="btn btn-small get-code" onclick="getCode(this)" id="J_getCode">获取验证码</button>
+                <button class="btn btn-small reset-code" id="J_resetCode" style="display:none;">
+                    <span id="J_second">60</span>秒后重发</button>
+                <button class="xin_zeng">新增收货地址</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/data.city.js"></script>
+    <script>
+        //时间选择就不多说了，mui框架自带，重点是城市
+        var start_time_picker = new mui.DtPicker({ "type": "date", "beginYear": 1960, "endYear": 2020 });
+        $("#useData").on("tap", function () {
+            setTimeout(function () {
+                start_time_picker.show(function (items) {
+                    $("#useData_id").val(items.text);
+                    $("#useData").html(items.text);
+                });
+            }, 200);
+        });
+
+        //选择省市区
+        var city_picker = new mui.PopPicker({ layer: 3 });
+        city_picker.setData(init_city_picker);
+        $("#city_text").on("tap", function () {
+            setTimeout(function () {
+                city_picker.show(function (items) {
+                    $("#city_id").val((items[0] || {}).value + "," + (items[1] || {}).value + "," + (items[2] || {}).value);//该ID为接收城市ID字段
+                    $("#city_text").html((items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text);
+                });
+            }, 200);
+        });
+        //选择省市
+        var city_picker1 = new mui.PopPicker({ layer: 2 });
+        city_picker1.setData(init_city_picker);
+        $("#city_text1").on("tap", function () {
+            setTimeout(function () {
+                city_picker1.show(function (items) {
+                    $("#city_id1").val((items[0] || {}).value + "," + (items[1] || {}).value);
+                    $("#city_text1").html((items[0] || {}).text + " " + (items[1] || {}).text);
+                });
+            }, 200);
+        });
+        //选择省
+        var city_picker2 = new mui.PopPicker({ layer: 1 });
+        city_picker2.setData(init_city_picker);
+        $("#city_text2").on("tap", function () {
+            setTimeout(function () {
+                city_picker2.show(function (items) {
+                    $("#city_id2").val((items[0] || {}).value);
+                    $("#city_text2").html((items[0] || {}).text);
+                });
+            }, 200);
+        });
+        //验证码
+        var isPhone = 1;
+        function getCode(e) {
+            checkPhone(); //验证手机号码
+            if (isPhone) {
+                resetCode(); //倒计时
+            } else {
+                $('#phone').focus();
+            }
+
+        }
+        //验证手机号码
+        function checkPhone() {
+            var phone = $('#phone').val();
+            var pattern = /^1[0-9]{10}$/;
+            isPhone = 1;
+            if (phone == '') {
+                alert('请输入手机号码');
+                isPhone = 0;
+                return;
+            }
+            if (!pattern.test(phone)) {
+                alert('请输入正确的手机号码');
+                isPhone = 0;
+                return;
+            }
+        }
+        //倒计时
+        function resetCode() {
+            $('#J_getCode').hide();
+            $('#J_second').html('60');
+            $('#J_resetCode').show();
+            var second = 60;
+            var timer = null;
+            timer = setInterval(function () {
+                second -= 1;
+                if (second > 0) {
+                    $('#J_second').html(second);
+                } else {
+                    clearInterval(timer);
+                    $('#J_getCode').show();
+                    $('#J_resetCode').hide();
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

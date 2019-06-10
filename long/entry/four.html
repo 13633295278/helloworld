@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="css/four.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <a href="#" onclick="javascript:history.go(-1);">
+                <img class="fan_hui" src="img/fan.png">
+            </a>
+            <h1>注册</h1>
+        </div>
+        <form class="biao_dan">
+            <div class="bao">
+                <h3>账号：</h3>
+                <div class="he">
+                    <img class="zhang_hu" src="img/icon1.png">
+                    <input class="bi4" type="text" placeholder="手机号">
+                    <div class="hong" style="display: none;">请输入手机号</div>
+                    <div class="succ" style="display: none;">√</div>
+                    <div class="hong" style="display: none;">请输入11位正确的手机号</div>
+                </div>
+            </div>
+            <div class="bao">
+                <h3>密码：</h3>
+                <div class="he">
+                    <img class="zhang_hu" src="img/icon2.png">
+                    <input class="bi6" type="text" placeholder="密码">
+                    <div class="hong" style="display: none;">请输入密码</div>
+                    <div class="succ" style="display: none;">√</div>
+                    <div class="hong" style="display: none;">请输入6至16位字符的密码</div>
+                </div>
+            </div>
+            <div class="bao">
+                <h3>确认密码：</h3>
+                <div class="he">
+                    <img class="zhang_hu" src="img/icon2.png">
+                    <input class="bi7" type="text" placeholder="确认密码">
+                    <div class="hong" style="display: none;">请再次输入密码</div>
+                    <div class="succ" style="display: none;">√</div>
+                    <div class="hong" style="display: none;">两次输入的密码不一致</div>
+                </div>
+            </div>
+            <div class="bao">
+                <h3>图片验证码：</h3>
+                <div class="he" style="width: 3.2rem; display: inline-block;">
+                    <img class="zhang_hu" src="img/icon1.png">
+                    <input class="bi" type="text" placeholder="图片验证码" style="width: 1.9rem;">
+                    <div class="hong" style="display: none;">请输入用户名</div>
+                    <div class="succ" style="display: none;">√</div>
+                </div>
+                <input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" />
+                <div class="bao">
+                    <input class="su" type="submit" value="立即注册">
+                </div>
+            </div>
+            <div class="list" style="margin-top: 0.2rem;">
+                <div class="guo">
+                    <span style="color: #7e8c8d;">已有账号？</span>
+                    <a style="color: black;" href="#">立即登录</a>
+                </div>
+            </div>
+        </form>
+        <div class="di">
+            <div class="shou_ye">
+                <img src="img/nav1.png">
+                <p>首页</p>
+            </div>
+            <div class="tou_zi">
+                <img src="img/nav2.png">
+                <p>我要投资</p>
+            </div>
+            <div class="lian_xi">
+                <img src="img/nav3.png">
+                <p>联系我们</p>
+            </div>
+            <div class="ge_ren">
+                <img src="img/nav4.png">
+                <p>个人中心</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var countdown = 20;
+
+        function settime(obj) {
+            if (countdown == 0) {
+                obj.removeAttribute("disabled");
+                obj.value = "免费获取验证码";
+                countdown = 20;
+                return;
+            } else {
+                obj.setAttribute("disabled", true);
+                obj.value = "重新发送(" + countdown + ")";
+                if (countdown <= 10) {
+                    $("#btn").css("color", "red");
+                }
+                countdown--;
+            }
+            setTimeout(function () {
+                settime(obj)
+            }, 1000)
+        }
+
+        $(".bi").bind('input propertychange', function () {
+
+            var b = $(".bi").val();
+            if (!b.length < 1) {
+                $(this).next().next().show();
+                $(this).next().hide();
+                return true;
+            } else {
+                $(this).next().show();
+                $(this).next().next().hide();
+            }
+            return true;
+        })
+        $(".bi").blur(function () {
+            var b = $(".bi").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b4
+        $(".bi4").bind('input propertychange', function () {
+            var phone = /^[1][3,4,5,7,8][0-9]{9}$/;
+            var b4 = $(".bi4").val();
+            if (b4 == '' || b4 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (!(phone.test(b4))) {
+                   
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return false;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi4").blur(function () {
+            var b = $(".bi4").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b6
+        $(".bi6").bind('input propertychange', function () {
+
+            var b6 = $(".bi6").val();
+            if (b6 == '' || b6 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (b6.length < 6 || b6.length > 16) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi6").blur(function () {
+            var b = $(".bi6").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b7
+        $(".bi7").bind('input propertychange', function () {
+            var v6 = $(this).parent().prev().children().val();
+            var b7 = $(".bi7").val();
+            if (b7 == '' || b7 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (b7 != v6) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    alert("1");
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi7").blur(function () {
+            var b = $(".bi7").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+    </script>
+</body>
+
+</html>

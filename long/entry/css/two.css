@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    text-align: center;
+    height: 100%;
+    background: url(../img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: #ffffff2e;
+    color: #fff;
+    text-align: left;
+    padding-left: 80px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+.kuang {
+    width: 21%;
+    background-color: #fff;
+    padding: 70px 2%;
+    border-radius: 2px;
+    margin-left: 70%;
+    margin-top: 6%;
+}
+
+.kuang p {
+    font-weight: 600;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.kuang img {
+    width: 26px;
+    margin-top: -5px;
+    vertical-align:middle;
+    float: left;
+}
+
+.kuang input {
+    border: none;
+    font-size: 16px;
+    vertical-align:middle;
+}
+
+.kuang input:focus{
+    outline: none;
+}
+.shu_ru {
+    border-bottom: 1px solid #d8d8d8;
+    margin: 22px 1%;
+}
+.kuang button{
+    background: #8BC34A;
+    padding: 10px 80px;
+    border: none;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}

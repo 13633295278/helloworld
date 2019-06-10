@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="rem.js">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="jquery.min.js">
+    <link rel="stylesheet" href="YuxiSlider.jQuery.min.js">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div>
+        <div class="demo">
+            <div class="slider">
+                <!--主体结构，请用此类名调用插件，此类名可自定义-->
+                <ul>
+                    <li><a href=""><img src="img/banner.jpg" /></a></li>
+                    <li><a href=""><img src="img/banner01.jpg" /></a></li>
+                    <li><a href=""><img src="img/banner.jpg" /></a></li>
+                    <li><a href=""><img src="img/banner01.jpg" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/YuxiSlider.jQuery.min.js"></script>
+        <script>
+            $(".slider").YuxiSlider({
+                width: 1519.2,//容器宽度
+                height: 300, //容器高度
+                control: $('.control'), //绑定控制按钮
+                during: 3000, //间隔3秒自动滑动
+                speed: 1000, //移动速度1秒
+                mousewheel: true, //是否开启鼠标滚轮控制
+                direkey: true //是否开启左右箭头方向控制
+            });
+        </script>
+    </div>
+</body>
+</html>

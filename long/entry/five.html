@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="css/five.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <img class="icon" src="img/ico.png" ;>
+            <span>客服</span>
+        </div>
+        <div class="bei_jing">
+            <img src="img/head.png" style="width: 100%;height:auto;">
+        </div>
+        <div class="xian_zhi">
+            <form class="nei" onsubmit="return login()">
+                <h3>短信快捷登录</h3>
+                <div class="hui">
+                    <img class="shou_tu" src="img/inpheo.png" style="width: 20px;">
+                    <input class="shou_ji" id="pan" type="text" placeholder="手机号码">
+                    <div class="hong" style="display: none;">请输入手机号</div>
+                    <div class="succ" style="display: none;">√</div>
+                    <div class="hong" style="display: none;">请输入11位正确的手机号</div>
+                </div>
+                <div class="hui1">
+                    <img class="shou_tu" src="img/an.png" style="width: 20px;">
+                    <input class="shou_ji1" id="pan" type="text" placeholder="验证码">
+                    <div class="hong1" style="display: none;">请输入验证码</div>
+                    <input type="button" id="btn" value="获取验证码" onclick="settime(this)" />
+                </div>
+                <div class="deng_lu">
+                    <input type="submit" value="立即登录 / 注册" class="deng_zhu"/>
+                </div>
+                <div class="xie_yi">
+                    <input type="checkbox">
+                    <span>
+                        同意扣扣网注册协议
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="qi_ta">
+            <span>其它登录方式</span>
+        </div>
+        <div class="si_fang">
+            <div class="fang1">
+                <img class="xiao" src="img/icon-sc1.png">
+                <p>微信</p>
+            </div>
+            <div class="fang2">
+                <img class="xiao" src="img/icon-sc2.png">
+                <p>淘宝</p>
+            </div>
+            <div class="fang3">
+                <img class="xiao" src="img/icon-sc3.png">
+                <p>腾讯</p>
+            </div>
+            <div class="fang4">
+                <img class="xiao" src="img/icon-sc4.png">
+                <p>微博</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var countdown = 20;
+        var tf = true;
+        var phone = /^[1][3,4,5,7,8][0-9]{9}$/;
+
+        function settime(obj) {
+            var pan = $(".shou_ji").val();
+            if (pan == "" || pan == null) {
+                $(".shou_ji").next().show();
+                return;
+            } else if (!(phone.test(pan))) {
+                $(".shou_ji").next().next().next().show();
+                return;
+            } else {
+                if (countdown == 0) {
+                    obj.removeAttribute("disabled");
+                    obj.value = "再次获取";
+                    countdown = 20;
+                    return;
+                } else {
+                    obj.setAttribute("disabled", true);
+                    obj.value = "重新发送(" + countdown + ")";
+                    if (countdown <= 10) {
+                        $("#btn").css("color", "red");
+                    }
+                    countdown--;
+                }
+                setTimeout(function () {
+                    settime(obj)
+                }, 1000)
+            }
+        }
+
+        function login() {
+            if ($(".xie_yi input").prop("checked")) {
+                return true;
+            } else {
+                alert("没有选中");
+                return false;
+            }
+        }
+
+        //b4
+        $(".shou_ji").bind('input propertychange', function () {
+            var b4 = $(".shou_ji").val();
+            if (b4 == '' || b4 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+                tf = false;
+                return tf;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (!(phone.test(b4))) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    tf = false;
+                    return tf;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+                tf = true;
+            }
+            return tf;
+        })
+        $(".shou_ji").blur(function () {
+            var b = $(".shou_ji").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b5
+        $(".shou_ji1").bind('input propertychange', function () {
+            var b5 = $(".shou_ji1").val();
+            if (b5 == '' || b5 == null) {
+                $(this).next().show();
+                return true;
+            } else {
+                $(this).next().hide();
+            }
+            return true;
+        })
+        $(".shou_ji1").blur(function () {
+            var b = $(".shou_ji1").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        var countdown = 20;
+
+        function settime(obj) {
+            if (countdown == 0) {
+                obj.removeAttribute("disabled");
+                obj.value = "免费获取验证码";
+                countdown = 20;
+                return;
+            } else {
+                obj.setAttribute("disabled", true);
+                obj.value = "重新发送(" + countdown + ")";
+                if (countdown <= 10) {
+                    $("#btn").css("color", "red");
+                }
+                countdown--;
+            }
+            setTimeout(function () {
+                settime(obj)
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>

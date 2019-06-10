@@ -1,0 +1,248 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--头部-->
+    <div class="header">
+        <div class="header_list">
+            <div class="row">
+               <a href="cart.html"><img src="img/back_jt.png"></a>
+                <h1>确认订单</h1>
+            </div>
+        </div>
+    </div>
+    <!--个人信息-->
+    <div class="person">
+        <div class="person_infor">
+            <div class="location">
+                <img src="img/icon_position.png">
+            </div>
+            <div class="detail">
+                <h2>
+                    收货人：<span>买了个东西</span>
+                </h2>
+                <p>收货地址：贵州省贵阳市南明区花果园金融街5号27层</p>
+            </div>
+            <div class="forward">
+                <a href="address.html"><img src="img/back_jt_w.png"></a>
+            </div>
+        </div>
+    </div>
+    <!--订单说明-->
+    <div class="order">
+        <div class="order_txt">
+            <h1>订单详情
+                <a href="">
+                    <span>修改</span>
+                    <img src="img/jt_down_r.png"></a>
+            </h1>
+        </div>
+        <img src="img/line_botm.jpg">
+    </div>
+    <!--订单详情-->
+    <div class="order_details">
+        <div class="cart_txt">
+            <h1>颜文明体育用品</h1>
+        </div>
+        <div class="line">
+        </div>
+        <div class="cart_first">
+            <ul class="details">
+                <li class="center_li">
+                    <ul class="center_ul">
+                        <li>
+                            <img src="img/pic01.jpg">
+                        </li>
+                        <li style="padding-left: 0.05rem;">
+                            <a>
+                                <h2>颜文明旗舰店Classical运动鞋男/女 男鞋头层牛皮休闲专业网球鞋</h2>
+                            </a>
+                            <p>
+                                白黑色 &nbsp;40
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="right_li">
+                    <h3>￥445.00</h3>
+                    <p>X2</p>
+                </li>
+            </ul>
+        </div>
+        <div class="coupon">
+            <h1>使用店铺优惠券
+                <img src="img/jt_down_r.png">
+            </h1>
+        </div>
+        <div class="express">
+            <ul class="express_list">
+                <li class="active item">
+                    <h1>同城快递</h1>
+                </li>
+                <li class="item">
+                    <h1>普通快递</h1>
+                </li>
+            </ul>
+            <ul class="second_list">
+                <li>
+                    <p>商家将尽快为您安排配送： 运费15.00</p>
+                </li>
+                <li class="hide">
+                    <p>由商家选择合作快递为您配送： 运费15.00</p>
+                </li>
+            </ul>
+        </div>
+        <div class="blank">
+        </div>
+        <div class="other_select">
+            <h1>其他选项</h1>
+            <img src="img/line_botm.jpg">
+            <ul class="other_list">
+                <li>
+                    <h2>开发票和缺货处理
+                        <img src="img/jt_down_r.png">
+                    </h2>
+                </li>
+                <li>
+                    <h2>送货时间
+                        <img src="img/jt_down_r.png">
+                    </h2>
+                </li>
+                <li style="border: 0;">
+                    <h2>订单附言
+                        <img src="img/jt_down_r.png">
+                    </h2>
+                </li>
+            </ul>
+            <div class="blank">
+            </div>
+        </div>
+        <!--支付方式-->
+        <div class="pay">
+            <h1>其他选项
+                <span><strong>（必选）</strong>请选择支付方式
+                </span>
+            </h1>
+            <img src="img/line_botm.jpg">
+            <div class="choose">
+                <div class="lable">
+                    <input type="radio" checked="checked" name="pay">
+                    <img src="img/icon_wechat.png" alt="wechat">
+                    微信支付
+                </div>
+                <div class="lable">
+                    <input type="radio" name="pay">
+                    <img src="img/icon_yue.png" alt="yue">
+                    余额支付 &nbsp;（可用余额：<span>1000.00</span>元）
+                </div>
+            </div>
+            <div class="blank">
+            </div>
+        </div>
+        <div class="delivery">
+            <div class="delivery_txt">
+                <p>该订单完成后，您将获得<span>250</span>积分以及价值
+                    <span>￥40.00</span>的红包</p>
+                <p>
+                    配送费用：<span>￥15.00</span>
+                </p>
+            </div>
+            <div class="blank">
+            </div>
+        </div>
+        <div class="sum">
+            <div class="sum_txt">
+                <p>合计：￥890.00</p>
+                <p>应付金额：<span>￥890.00</span></p>
+                <button>提交订单</button>
+            </div>
+            <div class="blank">
+            </div>
+        </div>
+
+    </div>
+    <!--底部-->
+    <div class="footer">
+            <ul class="footer_list">
+                <li>
+                    <img src="img/menu_icon01_r.png" alt="menu">
+                    <p> <a href="home.html">首页</a></p>
+                </li>
+                <li>
+                    <img src="img/menu_icon02.png" alt="menu">
+                    <p>分类</p>
+                </li>
+                <li>
+                    <img src="img/menu_icon03.png" alt="menu">
+                    <p><a href="cart.html">购物车</a></p>
+                </li>
+                <li>
+                    <img src="img/menu_icon04.png" alt="menu">
+                    <p>我的</p>
+                </li>
+            </ul>
+        </div>
+    <!--回到顶部-->
+    <div class="back_top">
+        <a href="#"><img src="img/back_top.png" alt="back_top"></a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--tab切换-->
+    <script>
+        $(".item").click(function () {
+            //为当触发的标签添加active，为当前触发标签的兄弟标签删除active 
+            $(this).addClass("active").siblings().removeClass("active");
+            //找到当前触发标签的索引位置值，如0，1，2
+            var v = $(this).index();
+            //根据标签索引位置值在内容菜单里查找位置也是等于v的标签，然后删除hide，再把兄弟标签添加hide
+            $('.second_list').children().eq(v).removeClass('hide').siblings().addClass('hide')
+        })
+
+    </script>
+    <!--回到顶部-->
+    <script>
+        // 原始版
+        $(function () {
+            $('.back_top a').click(function () {
+                $('html , body').animate({ scrollTop: 0 }, 'slow');
+            });
+        });
+    </script>
+</body>
+
+</html>

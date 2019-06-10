@@ -1,0 +1,438 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.header {
+    width: 100%;
+    height: 1rem;
+    background-color: #f5f5f5;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header_list {
+    height: 0.8rem;
+    width: 92%;
+    margin: 0 4%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.header_list li {
+    float: left;
+    height: 0.8rem;
+    line-height: 0.2rem;
+}
+
+.header_list_left {
+    width: 15%;
+}
+
+.header_list_left img {
+    width: 0.21rem;
+    height: 0.34rem;
+}
+
+.header_list_center {
+    width: 70%;
+}
+
+.header_list_right {
+    width: 15%;
+    text-align: right;
+}
+
+.header_list_right img {
+    width: 0.57rem;
+    height: 0.15rem;
+}
+
+.header_list_center ul {
+    width: 100%;
+    height: 0.8rem;
+}
+
+.header_list_center li {
+    width: 33.33%;
+    font-size: 0.35rem;
+    color: black;
+    height: 0.5rem;
+    margin-top: 0.1rem;
+    text-align: center;
+    line-height: 0.5rem;
+}
+
+.active {
+    border-radius: 2rem;
+    color: #10805a !important;
+    background-color: #ffe037;
+}
+
+.banner {
+    width: 100%;
+    height: 7.2rem;
+}
+
+.Gds_details {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+.detail_txt {
+    width: 92%;
+    margin: 0 4%;
+    background-color: white;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.detail_txt h2 {
+    color: black;
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+}
+
+.detail_txt p {
+    line-height: 0.3rem;
+}
+
+.detail_txt p strong {
+    color: red;
+    font-size: 0.4rem;
+    padding-right: 0.1rem;
+}
+
+.detail_txt p span {
+    color: darkgray;
+    font-size: 0.3rem;
+    text-decoration: line-through;
+}
+
+.detail_txt h3 {
+    line-height: 0.3rem;
+}
+
+.detail_txt h3 span {
+    font-size: 0.25rem;
+    color: darkgray;
+}
+
+.detail_txt h3 img {
+    width: 0.32rem;
+    height: 0.28rem;
+}
+
+.share {
+    float: right;
+    padding-top: 0.3rem;
+}
+
+.pay {
+    padding-left: 1.4rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #f1f1f1;
+}
+
+.choice {
+    width: 100%;
+    background-color: white;
+}
+
+.choice p {
+    font-size: 0.3rem;
+    color: black;
+    margin: 0.2rem 0;
+    padding: 0 4%;
+}
+
+.choice p span {
+    float: right;
+    color: green;
+    font-size: 0.4rem;
+    letter-spacing: 0.06rem;
+}
+
+.number {
+    width: 100%;
+    background-color: white;
+}
+
+.number_content {
+    margin: 0.2rem 0;
+    padding: 0 4%;
+    display: inline-flex;
+    width: 92%;
+}
+
+.number_content h2, .number_content span, .number_content input {
+    color: black;
+    font-size: 0.3rem;
+}
+
+.number_content h2 {
+    padding-right: 0.7rem;
+    line-height: 0.5rem;
+}
+
+.number_content span {
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid #e9dbdb;
+    border-radius: 0.5rem;
+    text-align: center;
+    line-height: 0.4rem;
+}
+
+.number_content input {
+    outline: none;
+    text-align: center;
+    border: 0;
+    width: 1rem;
+}
+
+.number_content h3 {
+    float: right;
+    color: darkgray;
+    font-size: 0.25rem;
+    line-height: 0.5rem;
+    padding-left: 1.9rem;
+}
+
+.self {
+    width: 100%;
+    background-color: white;
+}
+
+.self h2 {
+    margin: 0.2rem 0;
+    padding: 0 4%;
+    color: black;
+    font-size: 0.3rem;
+}
+
+.self h2 img {
+    width: 0.25‬rem;
+    height: 0.15rem;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    float: right;
+    padding-top: 0.2rem;
+}
+
+.blank {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #f1f1f1;
+}
+
+.goods {
+    width: 100%;
+    background-color: white;
+}
+
+.goods_txt {
+    margin: 0.2rem 0;
+    padding: 0 4%;
+}
+
+.goods_txt h1 {
+    color: green;
+    font-size: 0.35rem;
+    font-weight: 700;
+}
+
+.goods img {
+    width: 100%;
+}
+
+.footer {
+    width: 100%;
+    height: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 111;
+    background-color: white;
+    border: 1px solid darkgray;
+}
+
+.footer_list {
+    width: 100%;
+}
+
+.footer_list li {
+    float: left;
+}
+
+.first_li {
+    width: 45%;
+}
+
+.in_ul {
+    width: 100%;
+    text-align: center;
+}
+
+.in_li {
+    width: 32.6%;
+    height: 1rem;
+    padding-top: 0.1rem;
+    border-right: 1px solid darkgray;
+}
+
+.in_li img {
+    width: 0.44rem;
+    height: 0.44rem;
+}
+
+.in_li p {
+    padding-top: 0.1rem;
+    color: darkgray;
+    font-size: 0.25rem;
+    text-align: center;
+}
+
+.last_li {
+    width: 55%;
+}
+
+.right_li {
+    width: 100%;
+}
+
+.right_li li {
+    width: 50%;
+}
+
+.join {
+    width: 100%;
+    background-color: green;
+    color: white;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.35rem;
+    font-weight: bold;
+}
+
+.shopping {
+    width: 100%;
+    background-color: #ffe037;
+    color: green;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.35rem;
+    font-weight: bold;
+}
+
+.back_top {
+    position: fixed;
+    bottom: 2rem;
+    right: 0;
+}
+
+.back_top img {
+    border: 1px solid yellow;
+    background: yellowgreen;
+    border-radius: 0.5rem;
+}
+.second_tab,.third_tab{
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+.shop_details{
+    width: 100%;
+    height: 6rem;
+    margin-top: 1.3rem;
+    background-color: white;
+}
+.details_message{
+    margin: 0.2rem 0;
+    padding: 0 4%;
+}
+.details_message h1{
+    color: #10805a;
+    font-size: 0.35rem;
+    font-weight: bold;
+}
+.bar{
+    padding-top: 0.2rem;
+    width: 100%;
+}
+.bar img{
+    width: 100%;
+}
+.words{
+    margin: 0.3rem 0;
+    padding-left: 4%;
+}
+.words_list{
+    width: 100%;
+    line-height: 0.5rem;
+}
+.words_list li{
+    float: left;
+}
+.words_list_left{
+    width: 30%;
+    color: darkgray;
+    font-size: 0.25rem;
+}
+.words_list_right{
+    width: 70%;
+    color: black;
+    font-size: 0.25rem;
+}
+.evaluate{
+    width: 100%;
+    margin-top: 1.3rem;
+    background-color: white;
+}
+.first_evaluate{
+    margin: 0.2rem 0;
+    padding: 0 4%;
+    border-bottom: 1px solid #ddd;
+}
+.evaluate_txt h2{
+    color: black;
+    font-size: 0.3rem;
+    padding-right: 0.2rem;
+}
+.evaluate_txt img{
+    width: 1.13rem;
+    height: 0.19rem;
+}
+.evaluate_txt span{
+    color: darkgray;
+    font-size: 0.25rem;
+    padding-left: 2.7rem;
+}
+.first_evaluate p{
+    color: black;
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+}
+.first_evaluate li{
+    display: flex;
+    padding-bottom: 0.2rem;
+}
+.evaluate_img img{
+    width: 0.9rem;
+    height: 0.9rem;
+    padding-right: 0.2rem;
+}
+.hide{
+    display: none;
+}

@@ -1,0 +1,179 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--rem布局-->
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <ul class="header_list">
+            <li class="left"><img src="img/back.png" alt="back"></li>
+            <li class="center">购物车</li>
+            <li class="right"><img src="img/home.png" alt="home"></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="main_title">
+            <h2>已购商品</h2>
+        </div>
+        <!-- <div class="main_data">
+            <ul class="product">
+                <li>
+                    <img src="" alt="">
+                </li>
+                <li>
+                    <h2>葛根抖音伴侣</h2>
+                    <h6>120袋/箱</h6>
+                    <p>
+                        <span>￥</span>
+                        240
+                    </p>
+                </li>
+                <li class="add">
+                    <span class="first">
+                        -
+                    </span>
+                    <input value="0" class="change ">
+                    <span class="last">
+                        +
+                    </span>
+                </li>
+            </ul>
+        </div> -->
+        var str="streven";
+        document.write(str.subrst(3,4));
+        console.log()
+
+    </div>
+    <div class="count">
+        <div class="conut_data">
+            <div class="count_left">
+                <h3>合计：</h3>
+                <span></span>
+            </div>
+            <div class="count_right">
+                <a href="#">去结算</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">  
+        <ul class="footer_list">
+            <li>
+                <img src="img/nav1.png" alt="home">
+                <p>首页</p>
+            </li>
+            <li>
+                <img src="img/nav2.png" alt="home2">
+                <p>分类</p>
+            </li>
+            <li>
+                <img src="img/nav3-1.png" alt="home3">
+                <p class="selected">购物车</p>
+            </li>
+            <li>
+                <img src="img/nav4.png" alt="home4">
+                <p>个人中心</p>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        $.ajax({
+            type: "get",
+            url: "product.json",
+            dataType: "json",
+            success: function (data) {
+                for (var i = 0; i < data.product.length; i++) {
+                    console.log(data)
+                    $(".main").append(
+                        '<div class="main_data">'
+                        + '<ul class="product">'
+                        + '<li style="display:none;">' + data.product[i].id + '</li>'
+                        + '<li>'
+                        +'<img src='+data.product[i].image+'>'
+                        + '</li>'
+                        + '<li>'
+                        + '<h2 title="data.product[i].productName">' + data.product[i].productName.substring(0, 5) + '</h2>'
+                        + '<h6>' + data.product[i].number + '袋/箱' + '</h6>'
+                        + '<p>'
+                        + '<span>' + '￥' + '</span>'
+                        + data.product[i].number
+                        + '</p>'
+                        + '</li>'
+                        + '<li class="add">'
+                        + '<span class="first">'
+                        + '-'
+                        + ' </span>'
+                        + ' <input value="0" class="change">'
+                        + '<span class="last">'
+                        + '+'
+                        + '</span>'
+                        + '</li>'
+                        + '</ul>'
+                        + '</div>'
+                    );
+                };
+                var val = $(".change").val();
+                $(".last").click(function () {
+                    val++;
+                    $(".change").val(val);
+                });
+                $(".first").click(function () {
+                    if (val == 0) return;
+                    val--;
+                    $(".change").val(val);
+                });
+            }
+        });
+
+
+
+    </script>
+    <script>
+
+    </script>
+    <script>
+        // $(function () {
+        //     $(".footer_list li").find("p").click(function () {
+        //         $(this).addClass("selected").siblings().removeClass("selected");
+        //     });
+        // });
+        var lable_p = $('.footer_list li').children('p');
+
+        lable_p.click(function () {
+
+            lable_p.css('color', 'black');
+
+            $(this).css('color', 'red');
+
+        });
+
+
+    </script>
+</body>
+
+</html>

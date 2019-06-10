@@ -1,0 +1,200 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--头部-->
+    <div class="header">
+        <div class="header_list">
+            <div class="row">
+                <a href="goods.html"><img src="img/back_jt.png"></a>
+                <h1>购物车</h1>
+            </div>
+        </div>
+    </div>
+    <!--购物车-->
+    <div class="cart">
+        <div class="cart_txt">
+            <h1>颜文明体育用品</h1>
+        </div>
+        <div class="line">
+        </div>
+        <div class="cart_first">
+            <ul class="details">
+                <li class="left_li" id="circle">
+                    <input type="checkbox" name="sp" class="first_box">
+                </li>
+                <li class="center_li">
+                    <ul class="center_ul">
+                        <li>
+                            <img src="img/pic01.jpg">
+                        </li>
+                        <li style="padding-left: 0.05rem;">
+                            <a>
+                                <h2>2018年春颜文明旗舰店新款户外运动鞋男防滑耐磨网</h2>
+                            </a>
+                            <p>
+                                <input  class="first_val" style="color: red; width: 0.5rem;display: none;" value="645.00">
+                                <a style="color: red;" class="p_a">645.00</a>
+                                <span>￥659.00</span>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="right_li">
+                    <ul>
+                        <li><button class="reduce">-</span></button>
+                        <li><input type="text" value="1" id="num"></li>
+                        <li style="text-align: right;"><button class="adds">+</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="cart_second" style="border: 0;">
+            <ul class="details">
+                <li class="left_li" id="circle">
+                    <input type="checkbox" name="sp" class="first_box">
+                </li>
+                <li class="center_li">
+                    <ul class="center_ul">
+                        <li>
+                            <img src="img/pic02.jpg">
+                        </li>
+                        <li style="padding-left: 0.05rem;">
+                            <a>
+                                <h2>2018年春颜文明旗舰店新款户外运动鞋男防滑耐磨网</h2>
+                            </a>
+                            <p>
+                                <input type="text" class="second_val" style="color: red; width: 0.5rem;" value="245.00">
+                                <span>￥259.00</span>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="right_li">
+                    <ul>
+                        <li><button>-</span></button>
+                        <li><input type="text" value="1" id="num"></li>
+                        <li style="text-align: right;"><button>+</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="blank">
+        </div>
+        <div class="cart_txt">
+            <h1>商家：耐克体育用品旗舰店</h1>
+        </div>
+        <div class="line">
+        </div>
+        <div class="cart_third" style="border: 0;">
+            <ul class="details">
+                <li class="left_li" id="circle">
+                    <input type="checkbox" name="sp" class="first_box">
+                </li>
+                <li class="center_li">
+                    <ul class="center_ul">
+                        <li>
+                            <img src="img/pic01.jpg">
+                        </li>
+                        <li style="padding-left: 0.05rem;">
+                            <a>
+                                <h2>2018年春颜文明旗舰店新款户外运动鞋男防滑耐磨网</h2>
+                            </a>
+                            <p>
+                                <input type="text" class="third_val" style="color: red; width: 0.5rem;" value="645.00">
+                                <span>￥659.00</span>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="right_li">
+                    <ul>
+                        <li><button>-</button></li>
+                        <li><input type="text" value="1" id="num"></li>
+                        <li style="text-align: right;"><button>+</button></li>   
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <ul class="footer_list">
+            <li class="footer_list_left">
+                <ul class="f_ul">
+                    <li class="f_li" id="circle">
+                        <input type="checkbox" name="sp" class="first_box">
+                        <h3>全选</h3>
+                    </li>
+                    <li class="f_li_right">
+                        <h2>
+                            总计：
+                            <span class="count"></span>
+                        </h2>
+                        <p>不含运费</p>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer_list_right">
+                <ul>
+                    <li>
+                        <a href="order.html">
+                            <h3>去结算</h3>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!--加减-->
+    <script>
+        var t1 = $(".first_val").val();
+        var t2 = $(".second_val").val();
+        var t3 = $(".third_val").val();
+        var sum = Number(t1) + Number(t2) + Number(t3);
+        $(".count").html(sum);
+        console.log(sum);
+            var val = $("#num").val();
+            $(".adds").click(function () {
+                val++;
+                $("#num").val(val);
+                $(".count").html(val*t1+Number(t2)+Number(t3));
+                $(".p_a").html(val*t1);
+            });
+
+            $(".reduce").click(function () {
+                if (val == 0) return;
+                val--;
+                $("#num").val(val);
+                $(".count").html(val*t1+Number(t2)+Number(t3));
+                $(".p_a").html(val*t1);
+            });
+    </script>
+</body>
+
+</html>

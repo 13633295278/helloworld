@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .shou_hang {
+            background: linear-gradient(to right, #3f60fd, #9915fd);
+            color: white;
+            font-size: 10px;
+            margin-bottom: 0;
+        }
+
+        .bei_jing {
+            margin-left: 0.3rem;
+        }
+
+        .qian_dao {
+            margin-left: 1.7rem;
+        }
+
+        .logo {
+            margin-left: 2rem;
+        }
+        .xuan_xiang{
+            margin-top: 0;
+            background: linear-gradient(to right, #3f60fd, #9915fd);
+            color: white;
+            font-size: 11px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .dai_kuan{
+            width: 2.3rem;
+            height: 1.6128rem;
+            text-align: center;
+            display: inline-block;
+        }
+        .xin_yong{
+            width: 2.3rem;
+            height:1.6128rem;
+            text-align: center;
+            display: inline-block;
+        }
+        .cha_xun{
+            width: 2.3rem;
+            height:1.618rem;
+            text-align: center;
+            display: inline-block;
+        }
+        .yuan{
+            color: #babef9;
+            font-size: 11px;
+        }
+        .xian_zhi{
+            width: 6.2em;
+            margin-left: 0.5rem;
+        }
+        .ding_wei{
+            width: 6.2em;
+            margin-left: 0.5rem;
+           position: relative;
+           top: -0.5rem;
+        }
+        .shu_zi{
+            color:#3f60fd;
+            font-size: 30px;
+            font-weight: 1000;
+        }
+        .yu_e{
+            color: white;
+            background: linear-gradient(to right, #3f60fd, #9915fd);
+            border-radius: 10px;
+            font-size: 16px;
+            margin-left: 1rem;
+        }
+        .na_qian{
+            font-size: 25px;
+            line-height: 1.4361rem;
+        }
+        .xuan_dai{
+            width: 1.8rem;
+            height: 1.4131rem;
+            display: inline-block;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 3px;
+            background: linear-gradient(to right,#44cefb,#3a74f2)
+        }
+        .su_du{
+            width: 1.8rem;
+            height: 1.4131rem;
+            display: inline-block;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 3px;
+            background: linear-gradient(to right,#bd59fe,#7e48fd)
+        }
+        .xiao_e{
+            width: 1.8rem;
+            height: 1.4131rem;
+            display: inline-block;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 3px;
+            background: linear-gradient(to right,#ff914f,#fc486d)
+        }
+        .da_zi{
+            font-size: 18px;
+            color: white;
+        }
+        .xiao_zi{
+            font-size: 12px;
+            color: white;
+        }
+        .ya_zi{
+            width: 6.2rem;
+        }
+        .dao_hang{
+            font-size: 10px;
+            border-top: 1px #979797 solid;
+            color:#979797;
+            position: absolute;
+            bottom: 0px;;
+        }
+        .shou_ye{
+            width: 1.7rem;
+            text-align: center;
+            display: inline-block;
+        }
+        .zi_xun{
+            width: 1.7rem;
+            text-align: center;
+            display: inline-block;
+        }
+        .lun_tan{
+            width: 1.7rem;
+            text-align: center;
+            display: inline-block;
+        }
+        .zhang_hu{
+            width: 1.7rem;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <div>
+        <div class="header">
+            <div class="shou_hang">
+                <span class="bei_jing">北京</span>
+                <img class="logo" src="img/logo (1).png" width="103px" height="20px">
+                <span class="qian_dao">签到</span>
+            </div>
+            <div class="xuan_xiang">
+                <div class="dai_kuan">
+                    <img src="img/icon-top-001.png" width="40px" height="40px">
+                    <br/>
+                    <span>我要贷款</span>
+                </div>
+                <div class="xin_yong">
+                    <img src="img/icon-top-002.png" width="40px" height="40px">
+                    <br/>
+                    <span>办信用卡</span>
+                </div>
+                <div class="cha_xun">
+                    <img src="img/icon-top-003.png" width="40px" height="40px">
+                    <br/>
+                    <span>查询信用</span>
+                </div>
+            </div>
+        </div>
+        <div class="xian_zhi">
+        <div class="ding_wei">
+            <span class="yuan">最高申请额度（元）</span>
+            <br/>
+            <span class="shu_zi">1000~50万</span>
+            <span class="yu_e">预估额度</span>
+        </div>
+        <div class="na_qian">
+            <span>帮你拿钱</span>
+        </div>
+        <div class="xuan_dai">
+        <span class="da_zi">一键选贷款</span>
+        <span class="xiao_zi">定制私人贷款</span>
+    </div>
+    <div class="su_du">
+        <span class="da_zi">信用卡贷款</span>
+        <span class="xiao_zi">额度高批款快</span>
+    </div>
+    <div class="xiao_e">
+        <span class="da_zi">小额贷款</span>
+        <span class="xiao_zi">24小时内放款</span>
+    </div>
+    <div class="na_qian">
+            <span>活动发现</span>
+        </div>
+        <img class="ya_zi" src="img/img-ad.png">
+    </div>
+    <div class="dao_hang">
+        <div class="shou_ye">
+            <img src="img/下载 (1).png" width="20px" height="20px">
+            <br/>
+            <span>首页</span>
+        </div>
+        <div class="zi_xun">
+            <img src="img/下载.png" width="20px" height="20px">
+            <br/>
+            <span>资讯</span>
+        </div>
+        <div class="lun_tan">
+            <img src="img/下载 (2).png" width="20px" height="20px">
+            <br/>
+            <span>论坛</span>
+        </div>
+        <div class="zhang_hu">
+            <img src="img/下载 (3).png" width="20px" height="20px">
+            <br/>
+            <span>账户</span>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/two.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <span>考勤通</span>&nbsp;<span>·</span>&nbsp;<span>用数据改变未来</span>
+        </div>
+        <div class="kuang">
+            <p>考勤通登录</p>
+            <div class="shu_ru">
+                <img src="img/icon1.png">
+                <input class="zhang_hao" type="text" placeholder="请输入账号">
+            </div>
+
+            <div class="shu_ru">
+                <img src="img/icon2.png">
+                <input class="mi_ma" type="password" placeholder="请输入密码">
+            </div>
+            <button class="deng_lu">登录</button>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(".deng_lu").click(function () {
+            var zhang = $(".zhang_hao").val();
+            var mi = $(".mi_ma").val();
+            if (zhang == '') {
+                alert("请输入账号")
+                return false;
+            } else if (mi == '') {
+                alert("请输入密码")
+                return false;
+            }
+            alert("登陆成功")
+            return true;
+
+        });
+    </script>
+</body>
+
+</html>

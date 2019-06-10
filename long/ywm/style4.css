@@ -1,0 +1,424 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.1rem;
+}
+.header{
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header_list{
+    margin: 0.2rem 0;
+    padding: 0 4%;
+    height: 0.6rem;
+}
+.row{
+    width: 100%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    display: inline-flex;
+}
+.row img{
+    width: 0.21rem;
+    height: 0.34rem;
+    padding-top: 0.15rem;
+}
+.row h1{
+    font-size: 0.4rem;
+    color: black;
+    text-align: center;
+    width: 90%;
+    margin: 0 5%;
+}
+.person{
+    width: 100%;
+    height: 1.5rem;
+    margin-top: 1rem;
+    background-color: #10805a;
+}
+.person_infor{
+    margin: 0.2rem 0;
+    padding: 0 2%;
+    width: 96%;
+    height: 1.1rem;
+    display: inline-flex;
+}
+.location{
+    width: 7%;
+}
+.location img{
+    width: 0.51rem;
+    height: 0.51rem;
+    padding-top: 0.3rem;
+}
+.detail{
+    width: 86%;
+    padding-left: 0.1rem;
+    line-height: 0.5rem;
+}
+.detail h2{
+    font-size: 0.3rem;
+    color: white;
+}
+.detail h2 span{
+    font-size: 0.35rem;
+    color: white;
+}
+.detail p{
+    font-size: 0.25rem;
+    color: white;
+    padding-top: 0.2rem;
+    line-height: 0.3rem;
+}
+.forward{
+    width: 5%;
+    text-align: right;
+}
+.forward img{
+    width: 0.21rem;
+    height: 0.34rem;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-top: 0.3rem;
+}
+.order{
+    width: 100%;
+    background-color: white;
+}
+.order img{
+    width: 100%;
+}
+.order_txt{
+    width: 96%;
+    margin: 0.2rem 0;
+    padding: 0 2%;
+}
+.order_txt h1{
+    width: 100%;
+    color: green;
+    font-size: 0.35rem;
+}
+
+.order_txt span{
+    color: green;
+    font-size: 0.3rem;
+}
+.order_txt h1 img{
+    width: 0.23rem;
+    height: 0.13rem;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.order_txt a{
+    float: right;
+}
+.order:last-child{
+    width: 100%;
+}
+.order_details{
+    background-color: white;
+    width: 100%;
+    height: 17rem;
+}
+.cart_txt{
+    margin: 0.2rem 0;
+    padding: 0 4%;
+}
+.cart_txt h1{
+    color: black;
+    font-size: 0.3rem;
+}
+.line{
+    width: 100%;
+    height: 0.05rem;
+    background: #efeff4;
+}
+.details{
+    height: 1.4rem;
+    margin: 0.3rem 0;
+    padding: 0 2%;
+}
+.details li{
+    float: left;
+}
+.center_li{
+    width: 80%;
+}
+.center_ul{
+    width: 100%;
+    display: inline-flex;
+}
+.center_ul li{
+    float: left;
+}
+.center_ul img{
+    width: 1.34rem;
+    height: 1.34rem;
+}
+.center_ul h2{
+    font-size: 0.27rem;
+    color: #666;
+    line-height: 0.4rem;
+    padding-bottom: 0.2rem;
+}
+.center_ul p{
+    color: darkgray;
+    font-size: 0.3rem;
+}
+.right_li{
+    width: 20%;
+    text-align: right;
+}
+.right_li h3{
+    color: red;
+    font-size: 0.3rem;
+}
+.right_li p{
+    color: darkgray;
+    font-size: 0.3rem;
+    padding-top: 0.2rem;
+}
+.cart_first{
+    border-bottom: 1px dotted darkgray;
+}
+.coupon{
+    width: 100%;
+    background: white;
+    border-bottom: 1px dotted darkgray;
+}
+.coupon h1{
+    width: 96%;
+    margin: 0.2rem 0;
+    padding: 0 2%;
+    color: green;
+    font-size: 0.3rem;
+}
+.coupon h1 img{
+    float: right;
+    width: 0.23rem;
+    height: 0.13rem;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    margin-top: 0.1rem;
+}
+.express{
+    width: 100%;
+    background-color: white;
+    padding-bottom: 0.2rem;
+}
+.express_list{
+    width: 96%;
+    height: 0.8rem;
+    margin: 0.2rem 0;
+    padding: 0 2%;
+}
+.express_list li{
+    float: left;
+    margin-right: 0.2rem;
+}
+.active{
+    width: 2rem;
+    height: 0.7rem;
+    border: 1px solid green;
+    color: green;
+    border-radius: 0.2rem;
+}
+.express_list li h1{
+    width: 2rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    border: 1px solid darkgray;
+    font-size: 0.3rem;
+    color: black;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.second_list{
+    width: 100%;
+}
+.second_list p{
+    color: darkgray;
+    font-size: 0.25rem;
+    padding-left: 2%;
+}
+.hide{
+    display: none;
+}
+.blank{
+    width: 100%;
+    height: 0.1rem;
+    background-color: #b6b5b542;
+}
+.other_select{
+    width: 100%;
+    background-color: white;
+}
+.other_select h1{
+    width: 96%;
+    margin: 0.2rem 0;
+    padding: 0 2%;
+    color: green;
+    font-size: 0.35rem;
+}
+.other_select img{
+    width: 100%;
+}
+.other_list{
+    width: 96%;
+    padding: 0 2%;
+}
+.other_list li{
+    border-bottom: 1px dotted darkgray;
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+.other_list h2{
+    color: green;
+    font-size: 0.3rem;
+}
+.other_list h2 img{
+    float: right;
+    width: 0.23rem;
+    height: 0.13rem;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    margin-top: 0.4rem;
+}
+.pay{
+    width: 100%;
+    background-color: white;
+}
+.pay img{
+    width: 100%;
+}
+.pay h1{
+    width: 96%;
+    margin: 0.2rem 0;
+    padding: 0 2%;
+    color: green;
+    font-size: 0.35rem;
+}
+.pay>h1>span>strong{
+    color: red;
+    padding-left: 0.2rem;
+    font-size: 0.25rem;
+}
+.pay h1 span{
+    color: darkgray;
+    font-size: 0.3rem;
+    padding-left: 0.2rem;
+}
+.choose{
+    width: 96%;
+    margin: 0.2rem 0;
+    padding: 0 2%;
+}
+.lable img {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.lable{
+    color: black;
+    font-size: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+.lable span{
+    color: red;
+}
+.delivery{
+    width: 100%;
+    background-color: white;
+}
+.delivery_txt{
+    margin: 0.2rem 0;
+    padding: 0 2%;
+    width: 96%;
+}
+.delivery_txt p{
+    color: black;
+    font-size: 0.25rem;
+    line-height: 0.35rem;
+}
+.delivery_txt p span{
+    color: red;
+}
+.sum{
+    width: 100%;
+    background-color: white;
+}
+.sum_txt{
+    margin: 0.2rem 0;
+    padding: 0 2%;
+    width: 96%;
+}
+.sum_txt p{
+    color: black;
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+}
+.sum_txt p span{
+    color: red;
+}
+.sum_txt button{
+    margin-top: 0.3rem;
+    outline: none;
+    border: 0;
+    background-color: #ffe037;
+    width: 100%;
+    height: 0.8rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    color: green;
+    line-height: 0.8rem;
+    font-size: 0.35rem;
+}
+.footer {
+    width: 100%;
+    z-index: 1111;
+    background-color: #ffe037;
+    height: 1.1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer_list {
+    width: 100%;
+}
+
+.footer_list li {
+    float: left;
+    width: 25%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    text-align: center;
+}
+
+.footer_list li img {
+    width: 0.519rem;
+    height: 0.519rem;
+}
+
+.footer_list li p {
+    padding-top: 0.1rem;
+    color: green;
+    font-size: 0.3rem;
+}
+
+.back_top {
+    position: fixed;
+    bottom: 2rem;
+    right: 0;
+}
+
+.back_top img {
+    border: 1px solid yellow;
+    background: yellowgreen;
+    border-radius: 0.5rem;
+}

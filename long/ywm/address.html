@@ -1,0 +1,358 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" href="mui-master/examples/hello-mui/css/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="mui-master/examples/hello-mui/css/app.css" />
+    <link href="mui-master/examples/hello-mui/css/mui.picker.css" rel="stylesheet" />
+    <link href="mui-master/examples/hello-mui/css/mui.poppicker.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="mui-master/examples/hello-mui/css/mui.picker.min.css" />
+
+
+
+    <style>
+        body {
+            font-size: 0.3rem;
+        }
+
+        .mui-content-padded {
+            margin: 0;
+        }
+
+        .mui-btn {
+            font-size: 0.3rem;
+            padding: 0.2rem;
+            border-radius: 0.2rem;
+        }
+
+        h5.mui-content-padded {
+            margin-left: 3px;
+            margin-top: 20px !important;
+        }
+
+        h5.mui-content-padded:first-child {
+            margin-top: 12px !important;
+        }
+
+        .ui-alert {
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 16px;
+        }
+
+        html,
+        body,
+        .mui-content {
+            height: 0px;
+            margin: 0px;
+            background-color: #efeff4;
+        }
+
+        h5.mui-content-padded {
+            margin-left: 3px;
+            margin-top: 20px !important;
+        }
+
+        h5.mui-content-padded:first-child {
+            margin-top: 12px !important;
+        }
+
+        .mui-btn {
+            font-size: 16px;
+            padding: 8px;
+            margin: 3px;
+        }
+
+        .ui-alert {
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 16px;
+        }
+
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--头部-->
+    <div class="header">
+        <div class="header_list">
+            <div class="row">
+                <a href="order.html"><img src="img/back_jt.png"></a>
+                <h1>请填写收货地址</h1>
+            </div>
+        </div>
+    </div>
+    <!--表单-->
+    <div class="main">
+        <div class="form">
+            <div class="form_detail">
+                <input type="text" name="name" placeholder="买了个东西" id="name">
+                <input type="text" name="address" id="address" placeholder="电子邮件地址">
+                <input type="text" placeholder="花果园国际金融街5号27全层写字楼" id="add">
+                <input type="text" placeholder="15008508888" id="tel">
+                <div class="mui-content-padded">
+                    <button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'>北京市/北京市/东城区</button>
+                    <div id='cityResult3' class="ui-alert"></div>
+                </div>
+                <div class="mui-content">
+                    <div class="mui-content-padded">
+                        <button id='demo1' data-options='{}' class="btn mui-btn mui-btn-block">选择日期时间 ...</button>
+                        <div id='result' class="ui-alert"></div>
+                    </div>
+                </div>
+                <div id="btns">
+                    <button class="btn4">配送至这个地址</button>
+                    <button class="btn2">删除这个地址</button>
+                </div>
+            </div>
+            <div class="bg_img">
+                <img src="img/line_botm.jpg">
+            </div>
+            <div class="blank">
+            </div>
+        </div>
+        <div class="form" style="margin-top: 0.1rem;">
+            <div class="form_detail">
+                <input type="text" name="name" placeholder="收货人姓名" id="name">
+                <input type="text" name="address" id="address" placeholder="电子邮件地址">
+                <input type="text" placeholder="详细地址" id="add">
+                <input type="text" placeholder="手机号（必填）" id="tel">
+                <div class="mui-content-padded">
+                    <button id='showCityPicker31' class="mui-btn mui-btn-block" type='button'>请选择省/请选择市/请选择县</button>
+                    <div id='cityResult31' class="ui-alert"></div>
+                </div>
+                <div class="mui-content">
+                        <div class="mui-content-padded">
+                            <button id='demo1' data-options='{}' class="btn1 mui-btn mui-btn-block">选择日期时间 ...</button>
+                            <div id='result1' class="ui-alert"></div>
+                        </div>
+                    </div>
+                <div class="last_btn">
+                    <button>新增收货地址</button>
+                </div>
+            </div>
+            <div class="bg_img">
+                <img src="img/line_botm.jpg">
+            </div>
+            <div class="blank">
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <ul class="footer_list">
+            <li>
+                <img src="img/menu_icon01_r.png" alt="menu">
+                <p> <a href="home.html">首页</a></p>
+            </li>
+            <li>
+                <img src="img/menu_icon02.png" alt="menu">
+                <p>分类</p>
+            </li>
+            <li>
+                <img src="img/menu_icon03.png" alt="menu">
+                <p><a href="cart.html">购物车</a></p>
+            </li>
+            <li>
+                <img src="img/menu_icon04.png" alt="menu">
+                <p>我的</p>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+    <script src="mui-master/examples/hello-mui/js/mui.min.js"></script>
+    <!--<script src="mui-master/examples/hello-mui/js/mui.picker.min.js"></script>-->
+    <script src="mui-master/examples/hello-mui/js/mui.picker.js"></script>
+    <script src="mui-master/examples/hello-mui/js/mui.poppicker.js"></script>
+    <script src="mui-master/examples/hello-mui/js/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="mui-master/examples/hello-mui/js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        (function ($, doc) {
+            $.init();
+            $.ready(function () {
+                /**
+                 * 获取对象属性的值
+                 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+                 * @param {Object} obj 对象
+                 * @param {String} param 属性名
+                 */
+                var _getParam = function (obj, param) {
+                    return obj[param] || '';
+                };
+
+                //-----------------------------------------
+
+                //-----------------------------------------
+                //					//级联示例
+                var cityPicker3 = new $.PopPicker({
+                    layer: 3
+                });
+                cityPicker3.setData(cityData3);
+                var showCityPickerButton = doc.getElementById('showCityPicker3');
+                var showCityPickerButton1 = doc.getElementById('showCityPicker31');
+                var cityResult3 = doc.getElementById('cityResult3');
+                var cityResult31 = doc.getElementById('cityResult31');
+                showCityPickerButton.addEventListener('tap', function (event) {
+                    cityPicker3.show(function (items) {
+                        cityResult3.innerText = "你选择的城市是:" + _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+                        //返回 false 可以阻止选择框的关闭
+                        //return false;
+                    });
+                }, false);
+                showCityPickerButton1.addEventListener('tap', function (event) {
+                    cityPicker3.show(function (items) {
+                        cityResult31.innerText = "你选择的城市是:" + _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+                        //返回 false 可以阻止选择框的关闭
+                        //return false;
+                    });
+                }, false);
+            });
+        })(mui, document);
+    </script>
+    <script src="mui-master/examples/hello-mui/js/mui.picker.min.js"></script>
+    <script>
+        (function ($) {
+            $.init();
+            var result = $('#result')[0];
+            var btns = $('.btn');
+            btns.each(function (i, btn) {
+                btn.addEventListener('tap', function () {
+                    var _self = this;
+                    if (_self.picker) {
+                        _self.picker.show(function (rs) {
+                            result.innerText = '选择结果: ' + rs.text;
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        var id = this.getAttribute('id');
+                        /*
+                         * 首次显示时实例化组件
+                         * 示例为了简洁，将 options 放在了按钮的 dom 上
+                         * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                         */
+                        _self.picker = new $.DtPicker(options);
+                        _self.picker.show(function (rs) {
+                            /*
+                             * rs.value 拼合后的 value
+                             * rs.text 拼合后的 text
+                             * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                             * rs.m 月，用法同年
+                             * rs.d 日，用法同年
+                             * rs.h 时，用法同年
+                             * rs.i 分（minutes 的第二个字母），用法同年
+                             */
+                            result.innerText = '选择结果: ' + rs.text;
+                            /* 
+                             * 返回 false 可以阻止选择框的关闭
+                             * return false;
+                             */
+                            /*
+                             * 释放组件资源，释放后将将不能再操作组件
+                             * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                             * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                             * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                             */
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    }
+
+                }, false);
+            }
+            
+            );
+        })(mui);
+        (function ($) {
+            $.init();
+            var result1 = $('#result1')[0];
+            var btns1 = $('.btn1');
+            btns1.each(function (i, btn) {
+                btn.addEventListener('tap', function () {
+                    var _self = this;
+                    if (_self.picker) {
+                        _self.picker.show(function (rs) {
+                            result1.innerText = '选择结果: ' + rs.text;
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    } else {
+                        var optionsJson = this.getAttribute('data-options') || '{}';
+                        var options = JSON.parse(optionsJson);
+                        var id = this.getAttribute('id');
+                        /*
+                         * 首次显示时实例化组件
+                         * 示例为了简洁，将 options 放在了按钮的 dom 上
+                         * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                         */
+                        _self.picker = new $.DtPicker(options);
+                        _self.picker.show(function (rs) {
+                            /*
+                             * rs.value 拼合后的 value
+                             * rs.text 拼合后的 text
+                             * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                             * rs.m 月，用法同年
+                             * rs.d 日，用法同年
+                             * rs.h 时，用法同年
+                             * rs.i 分（minutes 的第二个字母），用法同年
+                             */
+                            result1.innerText = '选择结果: ' + rs.text;
+                            /* 
+                             * 返回 false 可以阻止选择框的关闭
+                             * return false;
+                             */
+                            /*
+                             * 释放组件资源，释放后将将不能再操作组件
+                             * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                             * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                             * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                             */
+                            _self.picker.dispose();
+                            _self.picker = null;
+                        });
+                    }
+
+                }, false);
+            }
+            
+            );
+        })(mui);
+        
+    </script>
+</body>
+
+</html>

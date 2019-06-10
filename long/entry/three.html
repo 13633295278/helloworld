@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/three.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="xian_zhi">
+            <div class="bian_kuang">
+                <form class="nei_xian">
+                    <h3>免费注册</h3>
+                    <div class="he">
+                        <input class="bi" type="text" placeholder="必填">
+                        <div class="hong" style="display: none;">不能为空！！！</div>
+                        <div class="succ" style="display: none;">√</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi1" type="text" placeholder="必填自定义提示">
+                        <div class="hong" style="display: none;">这是自定义提示！</div>
+                        <div class="succ" style="display: none;">√</div>
+                        <div class="hong" style="display: none;">请输入2至4位字符+不为空1</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi2" type="text" placeholder="请输入用户名">
+                        <div class="hong" style="display: none;">请输入用户名</div>
+                        <div class="succ" style="display: none;">√</div>
+                        <div class="hong" style="display: none;">请输入3至8位字符的用户名</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi3" type="text" placeholder="请输入昵称">
+                        <div class="hong" style="display: none;">请输入昵称</div>
+                        <div class="succ" style="display: none;">√</div>
+                        <div class="hong" style="display: none;">请输入3至12位字符的昵称</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi4" type="text" placeholder="请输入11位手机号">
+                        <div class="hong" style="display: none;">请输入手机号</div>
+                        <div class="succ" style="display: none;">√</div>
+                        <div class="ihp" style="display: none;">请输入11位正确的手机号</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi5" type="text" style="width: 60%;" placeholder="请输入验证码">
+                        <div class="hong1" style="display: none;">请输入验证码</div>
+                        <input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" />
+                    </div>
+                    <div class="he">
+                        <input class="bi6" type="password" placeholder="请填写长度为6-20个字符的密码">
+                        <div class="hong" style="display: none;">请输入密码</div>
+                        <div class="succ" style="display: none;">√</div>
+                        <div class="ihp" style="display: none;">请输入6至16位字符的密码</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi7" type="password" placeholder="请再次输入密码">
+                        <div class="hong" style="display: none;">请再次输入密码</div>
+                        <div class="succ" style="display: none;">√</div>
+                        <div class="ihp" style="display: none;">两次输入的密码不一致</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi8" type="text" placeholder="请输入邮箱,邮箱格式,123@163.com">
+                        <div class="hong" style="display: none;">请输入邮箱号</div>
+                        <div class="succ" style="display: none;">√</div>
+                        <div class="ihp" style="display: none;">请输入正确的邮箱号</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi9" type="text" placeholder="请输入身份证">
+                        <div class="hong" style="display: none;">请输入身份证</div>
+                        <div class="succ" style="display: none;">√</div>
+                        <div class="ihp" style="display: none;">身份证号码错误</div>
+                    </div>
+                    <div class="he">
+                        <input class="bi" type="submit" value="立即注册">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(".bi").bind('input propertychange', function () {
+
+            var b = $(".bi").val();
+            if (!b.length < 1) {
+                $(this).next().next().show();
+                $(this).next().hide();
+                return true;
+            } else {
+                $(this).next().show();
+                $(this).next().next().hide();
+            }
+            return true;
+        })
+        $(".bi").blur(function () {
+            var b = $(".bi").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b1
+        $(".bi1").bind('input propertychange', function () {
+
+            var b1 = $(".bi1").val();
+            if (b1 == '' || b1 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (b1.length < 2 || b1.length > 4) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi1").blur(function () {
+            var b = $(".bi1").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b2
+        $(".bi2").bind('input propertychange', function () {
+
+            var b2 = $(".bi2").val();
+            if (b2 == '' || b2 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (b2.length < 3 || b2.length > 8) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi2").blur(function () {
+            var b = $(".bi2").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b3
+        $(".bi3").bind('input propertychange', function () {
+
+            var b3 = $(".bi3").val();
+            if (b3 == '' || b3 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (b3.length < 3 || b3.length > 12) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi3").blur(function () {
+            var b = $(".bi3").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b4
+        $(".bi4").bind('input propertychange', function () {
+            var phone = /^[1][3,4,5,7,8][0-9]{9}$/;
+            var b4 = $(".bi4").val();
+            if (b4 == '' || b4 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (!(phone.test(b4))) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi4").blur(function () {
+            var b = $(".bi4").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b5
+        $(".bi5").bind('input propertychange', function () {
+            var b5 = $(".bi5").val();
+            if (b5 == '' || b5 == null) {
+                $(this).next().show();
+                return true;
+            } else {
+                $(this).next().hide();
+            }
+            return true;
+
+        })
+        $(".bi5").blur(function () {
+            var b = $(".bi5").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b6
+        $(".bi6").bind('input propertychange', function () {
+
+            var b6 = $(".bi6").val();
+            if (b6 == '' || b6 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (b6.length < 6 || b6.length > 16) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi6").blur(function () {
+            var b = $(".bi6").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b7
+        $(".bi7").bind('input propertychange', function () {
+            var v6 = $(this).parent().prev().children().val();
+            var b7 = $(".bi7").val();
+            if (b7 == '' || b7 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (b7 != v6) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi7").blur(function () {
+            var b = $(".bi7").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b8
+        $(".bi8").bind('input propertychange', function () {
+            var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+            var b8 = $(".bi8").val();
+            if (b8 == '' || b8 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (!reg.test(b8)) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi8").blur(function () {
+            var b = $(".bi8").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+        //b9
+        $(".bi9").bind('input propertychange', function () {
+            var pattern = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+            var b9 = $(".bi9").val();
+            if (b9 == '' || b9 == null) {
+                $(this).next().next().hide();
+                $(this).next().show();
+                $(this).next().next().next().hide();
+                return true;
+            } else {
+                $(this).next().hide();
+                $(this).next().next().hide();
+                $(this).next().next().next().show();
+                if (!pattern.test(b9)) {
+                    $(this).next().next().hide();
+                    $(this).next().hide();
+                    $(this).next().next().next().show();
+                    return true;
+                } else {
+                    $(this).next().next().show();
+                    $(this).next().next().next().hide();
+                }
+            }
+            return true;
+
+        })
+        $(".bi9").blur(function () {
+            var b = $(".bi9").val();
+            if (b == '' || b == null) {
+                $(this).next().show();
+
+                return false;
+            } else {
+                return true;
+            }
+        })
+    </script>
+    <script type="text/javascript">
+        var countdown = 20;
+
+        function settime(obj) {
+            if (countdown == 0) {
+                obj.removeAttribute("disabled");
+                obj.value = "免费获取验证码";
+                countdown = 20;
+                return;
+            } else {
+                obj.setAttribute("disabled", true);
+                obj.value = "重新发送(" + countdown + ")";
+                if (countdown <= 10) {
+                    $("#btn").css("color", "red");
+                }
+                countdown--;
+            }
+            setTimeout(function () {
+                settime(obj)
+            }, 1000)
+        }
+    </script>
+
+</body>
+
+</html>

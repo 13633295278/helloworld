@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+}
+
+.xian_zhi {
+    width: 430px;
+    height: 120%;
+    margin: 30px auto 0;
+    display: table;
+}
+
+.bian_kuang {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, .14);
+}
+
+.bian_kuang form h3 {
+    text-align: center;
+}
+
+.nei_xian {
+    margin: 15px 30px 30px;
+}
+
+.he {
+    height: 65px;
+}
+
+.bi {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi1 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi2 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi3 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi4 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi5 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi6 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi7 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi8 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+.bi9 {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #353434;
+    box-sizing: border-box;
+}
+
+.hong {
+    font-size: 12px;
+    padding-top: 2px;
+    color: red;
+    position: relative;
+    top: -31px;
+    left: 75%;
+}
+.hong1 {
+    font-size: 12px;
+    padding-top: 2px;
+    color: red;
+    position: relative;
+    top: -31px;
+    left: 40%;
+}
+
+.succ {
+    position: relative;
+    top: -31px;
+    left: 75%;
+}
+
+.ihp {
+    font-size: 12px;
+    padding-top: 2px;
+    color: red;
+    position: relative;
+    top: -31px;
+    left: 60%;
+}
+#btn{
+    height: 40px;
+    padding: 5px 15px;
+    width: 38%;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    color: #353434;
+    box-sizing: border-box;
+}
