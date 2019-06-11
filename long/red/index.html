@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="swiper-4.5.0/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="top_ding">
+            <div class="bao_xian">
+                <img src="img/fangda.png">
+                <input type="text" placeholder="零食大礼包">
+            </div>
+        </div>
+        <div class="top_lun">
+            <div class="wu_hong">推荐</div>
+            <div class="wu_hei">金币商城</div>
+            <div class="wu_hei">食品饮料</div>
+            <div class="wu_hei">男装</div>
+            <div class="wu_hei">家用电器</div>
+        </div>
+        <!-- 轮播 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-hash="slide1"><img src="img/banner.png" alt="focus1"></div>
+                <div class="swiper-slide" data-hash="slide2"><img src="img/banner.png" alt="focus1"></div>
+                <div class="swiper-slide" data-hash="slide3"><img src="img/banner.png" alt="focus1"></div>
+                <div class="swiper-slide" data-hash="slide4"><img src="img/banner.png" alt="focus1"></div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="bottom_lun">
+            <ul>
+                <li><img src="img/guan.png"><span>精选大牌制造商</span></li>
+                <li><img src="img/senven.png"><span>7天无理由退换</span></li>
+                <li><img src="img/car.png"><span>全场包邮</span></li>
+            </ul>
+        </div>
+        <div class="one_tu">
+            <img src="img/ad-001.png">
+        </div>
+        <div class="ten_tu">
+            <ul>
+                <li><img src="img/nav-001.png"><p>新品秒杀</p></li>
+                <li><img src="img/nav-002.png"><p>包邮专区</p></li>
+                <li><img src="img/nav-003.png"><p>全球工厂</p></li>
+                <li><img src="img/nav-004.png"><p>爱逛街购</p></li>
+                <li><img src="img/nav-005.png"><p>全球工厂</p></li>
+                <li><img src="img/nav-006.png"><p>限时红包</p></li>
+                <li><img src="img/nav-007.png"><p>赚取赚取</p></li>
+                <li><img src="img/nav-008.png"><p>抽奖面单</p></li>
+                <li><img src="img/nav-009.png"><p>零元抢购</p></li>
+                <li><img src="img/nav-010.png"><p>限时包邮</p></li>
+            </ul>
+        </div>
+        <div class="one_tu1">
+            <img src="img/ad-002.png">
+        </div>
+        <div class="hui_kong">
+        </div>
+        <div class="one_tu1">
+            <img src="img/ad-003.png">
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-001.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-002.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-003.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+            <div class="an"><button>查看全部</button></div>
+            
+        </div>
+         <div class="one_tu1">
+            <img src="img/ad-004.png">
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-005.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-006.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-007.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+            <div class="an"><button>查看全部</button></div>
+            
+        </div>
+        <div class="one_tu1">
+            <img src="img/ad-005.png">
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-008.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-002.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+        </div>
+        <div class="xiang_qing">
+            <div class="xiang_tu">
+                <img src="img/pd-005.png">
+            </div>
+            <div class="xiang_nei">
+                <p>蒙牛4月产纯牛奶250ml*9盒蒙牛4月产纯牛奶250ml*9盒</p>
+                <p class="hong">限量|新品秒杀价</p>
+                <p class="jia_ge">￥22.99 <span>￥59.99</span></p>
+                <span class="shu_liang">已抢123件<span>29%</span></span>
+                <span class="qiang">去抢购</span>
+            </div>
+            <div class="an"><button>查看全部</button></div>
+            
+        </div>
+        <div class="bottom_di">
+            <ul>
+                <li><img src="img/di1.png"><p style="color: #ed5252;">首页</p></li>
+                <li><img src="img/di2.png"><p>消息</p></li>
+                <li><img src="img/di3.png"><p>金币</p></li>
+                <li><img src="img/di4.png"><p>购物车</p></li>
+                <li><img src="img/di5.png"><p>我的</p></li>
+            </ul>
+        </div>
+    </div>
+    <script src="swiper-4.5.0/dist/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })
+    </script>
+</body>
+
+</html>

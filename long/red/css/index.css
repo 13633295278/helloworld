@@ -1,0 +1,205 @@
+.top_ding{
+    width: 100%;
+    height: 0.88rem;
+    background: #fafafa;
+    line-height: 0.88rem;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+.bao_xian{
+    width: 92%;
+    background: #ececec;
+    border-radius: 4px;
+    height: 0.64rem;
+    margin: 0.1rem auto;
+    line-height: 0.64rem;
+}
+.bao_xian img{
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-bottom: 0.2rem;
+    margin-left: 0.2rem;
+}
+.bao_xian input{
+    width: 89.5%;
+    border: none;
+    height: 0.64rem;
+    float:right;
+    background: #ececec;
+    font-size: 18px;
+}
+.bao_xian input:focus{
+    outline: none;
+}
+.top_lun{
+    width: 100%;
+    height: 0.9rem;
+    overflow: hidden;
+}
+.wu_hong{
+    width: 15%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 13px;
+    text-align: center;
+    line-height: 0.9rem;
+    display: inline-block;
+    float: left;
+    color: #ed7576;
+}
+.wu_hei{
+    width: 19%;
+    height: 0.9rem;
+    font-size: 13px;
+    text-align: center;
+    line-height: 0.9rem;
+    display: inline-block;
+    float: left;
+}
+.swiper-container{
+    width: 90%;
+    height: 2.4rem;
+}
+.swiper-slide img{
+    width: 100%;
+    height: auto;
+}
+.bottom_lun ul li{
+    list-style: none;
+    float: left;
+    font-size: 15px;
+    left: 0.1rem;
+    margin-left: 0.1rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    margin-top: 0.1rem;
+}
+.bottom_lun ul li img{
+    width: 0.4rem;
+    height: 0.4rem;
+    float: left;
+    margin-top: 0.05rem;
+}
+.one_tu img{
+    width: 100%;
+    height: auto;
+}
+.ten_tu{
+    width: 100%;
+    height: 3.2rem;
+}
+.ten_tu ul li{
+    width: 20%;
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+.ten_tu ul li img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.ten_tu ul li p{
+    font-size: 15px;
+    color: #666666;
+}
+.one_tu1 {
+    width: 100%;
+    text-align: center;
+}
+.one_tu1 img{
+    width: 90%;
+    height: auto;
+}
+.hui_kong{
+    width: 95%;
+    height: 0.2rem;
+    background: #f5f5f5;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    
+}
+.xiang_qing{
+    width: 90%;
+    margin: 0.1rem auto;
+    font-size: 15px;
+    border-bottom: 1px solid #666;
+}
+.xiang_tu{
+    display: inline-block;
+    width: 30%;
+    box-sizing: border-box;
+}
+.xiang_tu img{
+    width: 2rem;
+    height: 2rem;
+}
+.xiang_nei{
+    display: inline-block;
+    width: 68%;
+    box-sizing: border-box;
+    
+}
+.hong{
+    width: 45%;
+    background: #f9edef;
+    color: #f35a5a;
+    font-size: 14px;
+    margin-bottom:0.5rem;
+}
+.jia_ge{
+    color: #e6696a;
+    margin-bottom: 0.5rem;
+}
+.jia_ge span{
+    text-decoration: line-through;
+    font-size: 13px;
+    color: #cccccc;
+}
+.shu_liang{
+    background: #efa5a4;
+    border-radius: 0.4rem;
+    color: white;
+    width: 45%;
+    font-size: 13px;
+    margin-bottom: 0.2rem;
+}
+.qiang{
+    color: white;
+    background: #f35a5a;
+    float: right;
+    border-radius: 3px;
+    padding: 0.1rem 0.2rem;
+    margin-bottom: 0.2rem;
+}
+.bottom_di{
+    width: 100%;
+    height: 1.04rem;
+    position: sticky;
+    bottom: 0;
+    background: white;
+}
+.bottom_di ul li{
+    list-style: none;
+    font-size: 15px;
+    text-align: center;
+    width: 20%;
+    float: left;
+}
+.bottom_di ul li img{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+.xiang_qing button{
+    margin: 0 auto;
+    background: none;
+    color: #666;
+    border: 1px solid #d5d5d5;
+    border-radius: 22px;
+}
+.an{
+    width: 100%;
+    text-align: center;
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+}
