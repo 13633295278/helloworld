@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="logo">
+            <div v-bind:class="{lo:lo_xian}">{{tu}}</div>
+        </div>
+        <div class="two">
+            <input v-bind:class="{one:zhang}" placeholder="请输入你的手机号" type="text">
+            <input v-bind:class="{er:mi}" v-bind:type="bian" value="123456789">
+            <img class="mei" v-show="isshow" src="img/bi.png" @click="kong">
+            <img v-show="isshow2" class="ka" src="img/kai.png" @click="king">
+        </div>
+        <div class="de">
+            <button v-bind:class="{deng:zhi}" @click="an">{{dl}}</button>
+            <p v-bind:class="{wang:ww}">{{wa}}</p>
+            <p v-bind:class="{noo:n}">{{meiy}}<span v-bind:class="{li:l}">{{zhu}}</span></p>
+            <div v-show="tan" class="taan">{{cheng}}<p v-bind:class="{tui:ui}" @click="qu">{{shan}}</p></div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            tu: 'LOGO',
+            lo_xian: true,
+            isshow: true,
+            isshow2: false,
+            zhang: true,
+            mi: true,
+            bian: "password",
+            zhi: true,
+            dl: '登录',
+            ww: true,
+            wa: '忘记密码？',
+            n: true,
+            l: true,
+            meiy: '没有账号？',
+            zhu: '立即注册',
+            tan: false,
+            ui:false,
+            cheng: '登录成功',
+            shan:'X'
+            
+        },
+        methods: {
+            an: function () {
+                this.tan=true
+                
+            },
+            qu:function(){
+                this.tan=false
+                
+            },
+            kong: function () {
+                this.bian = "text"
+                this.isshow2 = true
+                this.isshow = false
+            },
+            king: function () {
+                this.bian = "password"
+                this.isshow = true
+                this.isshow2 = false
+            }
+        }
+    })
+    // new Vue({
+    //     el:'.de',
+    //     data:{
+    //         zhi:true,
+    //         dl:'登录',
+    //         ww:true,
+    //         wa:'忘记密码？',
+    //         n:true,
+    //         l:true,
+    //         meiy:'没有账号？',
+    //         zhu:'立即注册',
+    //         tan:false,
+    //         cheng:'登录成功',
+    //         an:function () {
+    //             tan:true
+    //         }
+    //     }
+
+    // })
+</script>
+
+</html>
