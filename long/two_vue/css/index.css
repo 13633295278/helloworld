@@ -1,0 +1,114 @@
+.header{
+    width: 100%;
+    height: 3.4rem;
+    overflow: hidden;
+    background: linear-gradient(to right, #0ab871 , #0ad0a6);
+}
+.tou_xiang{
+    width: 1.2rem;
+    display: inline-block;
+    height: 1.2rem;
+}
+.fen{
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-left: 0.2rem;
+}
+.liang{
+    width: 20%;
+    color: white;
+    vertical-align: top;
+    display: inline-block;
+}
+.ming{
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    font-size: 20px;
+}
+.ji_fen{
+    width: 60%;
+    font-size: 12px;
+    border-radius: 22px;
+    background: #46d698;
+    text-align: center;
+}
+.ge{
+    font-size: 14px;
+    color: white;
+    vertical-align:top;
+    margin-top: 0.4rem;
+    display: inline-block;
+    margin-left: 2rem;
+}
+.er_fen{
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    margin-top: 0.3rem;
+}
+.liu{
+    width: 60%;
+}
+.san{
+    margin-top: 0.1rem;
+    width: 32%;
+    float: left;
+    text-align: center;
+}
+.an{
+    height: 0.6rem;
+    line-height: 0.6rem;
+    margin-top: 0.2rem;
+    background: #474747;
+    border: none;
+    color: #fff;
+    vertical-align:middle;
+    border-radius: 22px;
+    margin-left: 0.8rem;
+}
+.ri{
+    width: 0.38rem;
+    height: 0.38rem;
+    display: inline-block;
+    vertical-align: sub;
+}
+.qian_ji{
+    color: #54ca9a;
+}
+.dan{
+    width: 90%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 16px;
+    margin-left: 5%;
+    border-bottom: 1px solid #e2e2e2;
+    vertical-align: middle;
+}
+.icon{
+    width: 0.5rem;
+    height: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.re{
+    width: 0.284rem;
+    height: 0.284rem;
+    margin-left: 4rem;
+}
+.re2{
+    width: 0.284rem;
+    height: 0.284rem;
+    margin-left: 3.4rem;
+}
+.re3{
+    width: 0.284rem;
+    height: 0.284rem;
+    margin-left: 3.7rem;
+}
+.hui{
+    width: 100%;
+    height: 10px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}

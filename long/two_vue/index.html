@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div id="app">
+        <div :class="{header:jian}">
+            <div :class="{fen:ceng}">
+                <img :class="{tou_xiang:us}" src="img/user.png">
+                <ul :class="{liang:he}">
+                    <li :class="{ming:lmi}">{{ya}}</li>
+                    <li :class="{ji_fen:sev}">{{sen}}</li>
+                </ul>
+                <div :class="{ge:ren}">{{geren}}</div>
+            </div>
+            <div :class="{er_fen:cen}">
+                <ul :class="{liu:fe}">
+                    <li :class="{san:shu}">{{hun}}</li>
+                    <li :class="{san:shu}">{{hun2}}</li>
+                    <li :class="{san:shu}">{{hun3}}</li>
+                    <li :class="{san:shu}">{{guan}}</li>
+                    <li :class="{san:shu}">{{feng}}</li>
+                    <li :class="{san:shu}">{{huo}}</li>
+                </ul>
+                <button :class="{an:niu}"><img :class="{ri:lii}" src="img/ri_li.png">{{qian}}<span
+                        :class="{qian_ji:jia}">{{jija}}</span></button>
+            </div>
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-001.png">
+            <span :class="{xiang:yong}">{{tian}}</span>
+            <img :class="{re:tur}" src="img/return2.png">
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-002.png">
+            <span :class="{xiang:yong}">{{ch}}</span>
+            <img :class="{re2:tur}" src="img/return2.png">
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-003.png">
+            <span :class="{xiang:yong}">{{wod}}</span>
+            <img :class="{re:tur}" src="img/return2.png">
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-004.png">
+            <span :class="{xiang:yong}">{{renl}}</span>
+            <img :class="{re2:tur}" src="img/return2.png">
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-005.png">
+            <span :class="{xiang:yong}">{{bei}}</span>
+            <img :class="{re2:tur}" src="img/return2.png">
+        </div>
+        <div :class="{hui:kong}"></div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-006.png">
+            <span :class="{xiang:yong}">{{shou}}</span>
+            <img :class="{re2:tur}" src="img/return2.png">
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-007.png">
+            <span :class="{xiang:yong}">{{wen}}</span>
+            <img :class="{re:tur}" src="img/return2.png">
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-008.png">
+            <span :class="{xiang:yong}">{{nei}}</span>
+            <img :class="{re2:tur}" src="img/return2.png">
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-009.png">
+            <span :class="{xiang:yong}">{{dong}}</span>
+            <img :class="{re:tur}" src="img/return2.png">
+        </div>
+        <div :class="{hui:kong}"></div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-010.png">
+            <span :class="{xiang:yong}">{{she}}</span>
+            <img :class="{re3:tur}" src="img/return2.png">
+        </div>
+        <div :class="{dan:dna}">
+            <img :class="{icon:ico}" src="img/icon-fl-011.png">
+            <span :class="{xiang:yong}">{{jing}}</span>
+            <img :class="{re:tur}" src="img/return2.png">
+        </div>
+        <div :class="{hui:kong}"></div>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                jian: true,
+                us: true,
+                ceng: true,
+                lmi: true,
+                ya: '李振亚',
+                sev: true,
+                sen: '7积分',
+                he: true,
+                ren: true,
+                geren: '个人主页',
+                cen: true,
+                shu: true,
+                hun: '129',
+                hun2: '129',
+                hun3: '129',
+                guan: '关注',
+                feng: '粉丝',
+                huo: '获赞与收藏',
+                fe: true,
+                niu: true,
+                jia: true,
+                qian: '签到',
+                jija: '积分+3',
+                lii: true,
+                dna: true,
+                ico: true,
+                yong: true,
+                tur: true,
+                tian: '添加好友',
+                ch: '成为认证会员',
+                wod: '我的钱包',
+                renl: '我的求职认领',
+                bei: '我的开聊被聊',
+                shou: '我的关注收藏',
+                wen: '我的问答',
+                nei: '我的发布内容',
+                dong: '我的东家',
+                she: '设置与帮助',
+                jing: '首都网警',
+                kong: true,
+            }
+        })
+    </script>
+</body>
+
+</html>
